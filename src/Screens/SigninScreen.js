@@ -33,8 +33,9 @@ export default class SigninScreen extends Component {
               }}>
               <Text style={{fontSize: 28, fontWeight: 'bold'}}>WareHouse</Text>
             </View>
+            <View style={{marginTop: 30}}></View>
             <Headings text="Sign In" />
-            <View style={{}}></View>
+
             <InputBox
               variant="primary"
               placeholder="Email"
@@ -111,7 +112,10 @@ export default class SigninScreen extends Component {
                   textDecorationLine: 'none',
                 }}
               />
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('ForgotPassword');
+                }}>
                 <Text style={{textDecorationLine: 'underline'}}>
                   Forgot Password?
                 </Text>

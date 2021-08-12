@@ -6,6 +6,9 @@ import ExploreScreen from '../Screens/ExploreScreen';
 import SignupScreen from '../Screens/SignupScreen';
 import SignInformationScreen from '../Screens/SignInformationScreen';
 import SigninScreen from '../Screens/SigninScreen';
+import UploadPicScreen from '../Screens/UploadPicScreen';
+import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen';
+import OTPScreen from '../Screens/OTPScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +22,9 @@ export default function StackNavigation() {
       <Stack.Screen name="Signup" component={SignupScreen} />
       <Stack.Screen name="Information" component={SignInformationScreen} />
       <Stack.Screen name="Signin" component={SigninScreen} />
+      <Stack.Screen name="UploadPic" component={UploadPicScreen} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
+      <Stack.Screen name="OTP" component={OTPScreen} />
     </Stack.Navigator>
   );
 }

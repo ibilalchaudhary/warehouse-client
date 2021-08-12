@@ -188,7 +188,7 @@ export default class SignInformationScreen extends Component {
               <Buttons
                 placeholder="Save"
                 onPress={() => {
-                  navigation.navigate('Signin');
+                  navigation.navigate('UploadPic');
                 }}
               />
             </View>
