@@ -4,6 +4,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import DiscoverScreen from '../Screens/DiscoverScreen';
 import ExploreScreen from '../Screens/ExploreScreen';
 import SignupScreen from '../Screens/SignupScreen';
+import SignInformationScreen from '../Screens/SignInformationScreen';
+import SigninScreen from '../Screens/SigninScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +17,8 @@ export default function StackNavigation() {
       <Stack.Screen name="Discover" component={DiscoverScreen} />
       <Stack.Screen name="Explore" component={ExploreScreen} />
       <Stack.Screen name="Signup" component={SignupScreen} />
+      <Stack.Screen name="Information" component={SignInformationScreen} />
+      <Stack.Screen name="Signin" component={SigninScreen} />
     </Stack.Navigator>
   );
 }

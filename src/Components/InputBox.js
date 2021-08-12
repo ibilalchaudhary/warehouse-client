@@ -20,7 +20,7 @@ export default class InputBox extends Component {
             height: 50,
             borderRadius: 8,
             backgroundColor: WHITE,
-            marginTop: 12,
+            marginVertical: 10,
             borderColor: this.state.focus ? PRIMARY : '#ffffff',
             borderWidth: 1,
           }}>
@@ -35,7 +35,7 @@ export default class InputBox extends Component {
           </View>
           <TextInput
             secureTextEntry={this.props.secureTextEntry}
-            placeholder="Email"
+            placeholder={this.props.placeholder}
             placeholderTextColor={SECONDARY}
             style={{
               marginLeft: 16,

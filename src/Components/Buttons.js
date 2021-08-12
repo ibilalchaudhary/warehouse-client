@@ -12,7 +12,7 @@ export default function Buttons({placeholder, onPress}) {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          width: '90%',
+          width: '100%',
           height: 50,
           backgroundColor: PRIMARY,
           marginBottom: 22,
