@@ -1,6 +1,14 @@
 import React, {Component} from 'react';
 import {View, Text, TouchableOpacity, TextInput} from 'react-native';
-import {DARK, PRIMARY, SECONDARY, WHITE} from '../Constants/Colors';
+import {
+  DARK,
+  INPUT_BG,
+  PRIMARY,
+  SECONDARY,
+  TEXT_COLOR,
+  WHITE,
+} from '../Constants/Colors';
+import Svg, {G, Path} from 'react-native-svg';
 
 export default class InputBox extends Component {
   constructor(props) {
@@ -54,6 +62,79 @@ export default class InputBox extends Component {
             }}
           />
         </TouchableOpacity>
+      );
+    } else if (this.props.variant === 'Search') {
+      return (
+        <View
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}>
+          <TouchableOpacity
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '80%',
+              height: 50,
+              marginTop: 12,
+              borderWidth: 1,
+              borderRadius: 8,
+              alignContent: 'center',
+              backgroundColor: INPUT_BG,
+            }}>
+            <TextInput
+              style={{width: '80%', color: TEXT_COLOR}}
+              placeholder="Search here"
+              placeholderTextColor={SECONDARY}
+              onFocus={() => {
+                this.setState({
+                  focus: true,
+                });
+              }}
+              onBlur={() => {
+                this.setState({
+                  focus: false,
+                });
+              }}
+            />
+            <Svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={20.355}
+              height={20.355}
+              viewBox="0 0 21.355 21.355">
+              <G
+                data-name="Icon feather-search"
+                fill="none"
+                stroke="#797977"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={3}>
+                <Path
+                  data-name="Path 706"
+                  d="M17.263 9.382A7.882 7.882 0 119.382 1.5a7.882 7.882 0 017.881 7.882z"
+                />
+                <Path data-name="Path 707" d="M19.234 19.234l-4.286-4.286" />
+              </G>
+            </Svg>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              width: 50,
+              height: 50,
+              borderRadius: 8,
+              marginTop: 12,
+              justifyContent: 'center',
+              alignItems: 'center',
+              alignContent: 'center',
+              backgroundColor: PRIMARY,
+            }}>
+            {this.props.svg}
+          </TouchableOpacity>
+        </View>
       );
     }
   }

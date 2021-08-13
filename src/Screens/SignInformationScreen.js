@@ -22,9 +22,9 @@ export default class SignInformationScreen extends Component {
     return (
       <View style={{backgroundColor: WHITE, width: width, height: height}}>
         <ImageBackground
-          style={{height: height, flex: 1, paddingHorizontal: 18}}
+          style={{height: height, flex: 1}}
           source={require('../Assets/Signup__bg.png')}>
-          <ScrollView style={{flex: 1}}>
+          <ScrollView style={{flex: 1, paddingHorizontal: 18}}>
             <View
               style={{
                 display: 'flex',

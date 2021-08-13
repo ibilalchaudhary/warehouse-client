@@ -175,7 +175,10 @@ export default class SignupScreen extends Component {
                 alignItems: 'center',
               }}>
               <Text>Already have a account?</Text>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('Signin');
+                }}>
                 <Text style={{textDecorationLine: 'underline'}}>Sign In</Text>
               </TouchableOpacity>
             </View>

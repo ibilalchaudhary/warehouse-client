@@ -129,7 +129,12 @@ export default class SigninScreen extends Component {
                 alignItems: 'center',
                 marginVertical: 33,
               }}>
-              <Buttons placeholder="Sign In" onPress={() => {}} />
+              <Buttons
+                placeholder="Sign In"
+                onPress={() => {
+                  navigation.navigate('Dashboard');
+                }}
+              />
             </View>
             <View
               style={{
@@ -148,7 +153,10 @@ export default class SigninScreen extends Component {
                 alignItems: 'center',
               }}>
               <Text>Already have a account?</Text>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('Signup');
+                }}>
                 <Text style={{textDecorationLine: 'underline'}}>Sign Up</Text>
               </TouchableOpacity>
             </View>
