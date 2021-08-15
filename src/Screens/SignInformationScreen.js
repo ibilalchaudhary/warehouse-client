@@ -30,6 +30,7 @@ export default class SignInformationScreen extends Component {
                 display: 'flex',
                 padding: 50,
                 alignItems: 'center',
+                marginBottom: 8,
               }}>
               <Text style={{fontSize: 28, fontWeight: 'bold'}}>WareHouse</Text>
             </View>

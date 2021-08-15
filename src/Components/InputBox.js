@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, TouchableOpacity, TextInput} from 'react-native';
 import {
   DARK,
+  DISABLE,
   INPUT_BG,
   PRIMARY,
   SECONDARY,
@@ -81,7 +82,6 @@ export default class InputBox extends Component {
               width: '80%',
               height: 50,
               marginTop: 12,
-              borderWidth: 1,
               borderRadius: 8,
               alignContent: 'center',
               backgroundColor: INPUT_BG,
@@ -90,36 +90,38 @@ export default class InputBox extends Component {
               style={{width: '80%', color: TEXT_COLOR}}
               placeholder="Search here"
               placeholderTextColor={SECONDARY}
-              onFocus={() => {
-                this.setState({
-                  focus: true,
-                });
-              }}
-              onBlur={() => {
-                this.setState({
-                  focus: false,
-                });
-              }}
+              marginLeft={12}
+              placeholderTextColor={SECONDARY}
             />
-            <Svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20.355}
-              height={20.355}
-              viewBox="0 0 21.355 21.355">
-              <G
-                data-name="Icon feather-search"
-                fill="none"
-                stroke="#797977"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={3}>
-                <Path
-                  data-name="Path 706"
-                  d="M17.263 9.382A7.882 7.882 0 119.382 1.5a7.882 7.882 0 017.881 7.882z"
-                />
-                <Path data-name="Path 707" d="M19.234 19.234l-4.286-4.286" />
-              </G>
-            </Svg>
+            <TouchableOpacity
+              style={{
+                width: 50,
+                height: 50,
+                display: 'flex',
+                justifyContent: 'center',
+                alignContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={20.355}
+                height={20.355}
+                viewBox="0 0 21.355 21.355">
+                <G
+                  data-name="Icon feather-search"
+                  fill="none"
+                  stroke="#797977"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={3}>
+                  <Path
+                    data-name="Path 706"
+                    d="M17.263 9.382A7.882 7.882 0 119.382 1.5a7.882 7.882 0 017.881 7.882z"
+                  />
+                  <Path data-name="Path 707" d="M19.234 19.234l-4.286-4.286" />
+                </G>
+              </Svg>
+            </TouchableOpacity>
           </TouchableOpacity>
           <TouchableOpacity
             style={{

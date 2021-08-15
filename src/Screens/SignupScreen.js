@@ -22,9 +22,9 @@ export default class SignupScreen extends Component {
     return (
       <View style={{backgroundColor: WHITE, width: width, height: height}}>
         <ImageBackground
-          style={{height: height, flex: 1, paddingHorizontal: 18}}
+          style={{height: height, flex: 1}}
           source={require('../Assets/Signup__bg.png')}>
-          <ScrollView style={{flex: 1}}>
+          <ScrollView style={{flex: 1, paddingHorizontal: 18}}>
             <View
               style={{
                 display: 'flex',
@@ -123,7 +123,7 @@ export default class SignupScreen extends Component {
             />
             <View
               style={{
-                display: 'flex',
+                flex: 1,
                 flexDirection: 'row',
                 alignItems: 'center',
                 marginTop: 10,
@@ -134,7 +134,7 @@ export default class SignupScreen extends Component {
                 fillColor={PRIMARY}
                 unfillColor="#FFFFFF"
                 onPress={() => {}}
-                text="I agree to Terms and Conditions & data Privacy Policy"
+                text="I agree to "
                 iconStyle={{borderColor: SECONDARY}}
                 textStyle={{
                   fontSize: 14,
@@ -142,6 +142,16 @@ export default class SignupScreen extends Component {
                   textDecorationLine: 'none',
                 }}
               />
+              <TouchableOpacity style={{display: 'flex', flexDirection: 'row'}}>
+                <Text
+                  style={{
+                    textDecorationLine: 'underline',
+                    fontSize: 14,
+                    color: '#636768',
+                  }}>
+                  Terms and Conditions & Data Policy
+                </Text>
+              </TouchableOpacity>
             </View>
 
             <View
