@@ -9,7 +9,7 @@ import {
   Image,
 } from 'react-native';
 import Headings from '../Components/Headings';
-import {DARK, PRIMARY, SECONDARY, WHITE} from '../Constants/Colors';
+import {DARK, INPUT_BG, PRIMARY, SECONDARY, WHITE} from '../Constants/Colors';
 import {height, width} from '../Constants/Dimensions';
 import Svg, {G, Path} from 'react-native-svg';
 import Buttons from '../Components/Buttons';
@@ -49,28 +49,30 @@ export default class OTPScreen extends Component {
               codeLength="4"
               inputPosition="center"
               size={50}
-              onFulfill={isValid => this._onFinishCheckingCode1(isValid)}
+              onFulfill={() => {}}
               containerStyle={{marginTop: 60}}
-              codeInputStyle={{borderWidth: 1.5}}
+              codeInputStyle={{borderRadius: 8, backgroundColor: INPUT_BG}}
             />
-            <TouchableOpacity
+            <View
               style={{
                 display: 'flex',
                 flexDirection: 'row',
-                alignItems: 'center',
                 justifyContent: 'center',
-                marginTop: 16,
+                alignItems: 'center',
+                marginTop: 12,
               }}>
-              <Text
-                style={{
-                  color: PRIMARY,
-                  textDecorationLine: 'underline',
-                  marginRight: 6,
-                }}>
-                Resend OTP
-              </Text>
-              <Text style={{color: PRIMARY}}>12:04</Text>
-            </TouchableOpacity>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    color: PRIMARY,
+                    textDecorationLine: 'underline',
+                    marginRight: 6,
+                  }}>
+                  Resend OTP
+                </Text>
+              </TouchableOpacity>
+              <Text style={{color: PRIMARY}}>12s</Text>
+            </View>
             <View style={{marginVertical: 60}}>
               <Buttons
                 placeholder="Save"

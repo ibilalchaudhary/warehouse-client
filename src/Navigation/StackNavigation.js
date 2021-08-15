@@ -10,6 +10,8 @@ import UploadPicScreen from '../Screens/UploadPicScreen';
 import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen';
 import OTPScreen from '../Screens/OTPScreen';
 import DashboardScreen from '../Screens/DashboardScreen';
+import BottomTabDashboard from './BottomTabDashboard';
+import FilterScreen from '../Screens/FilterScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +28,8 @@ export default function StackNavigation() {
       <Stack.Screen name="UploadPic" component={UploadPicScreen} />
       <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
       <Stack.Screen name="OTP" component={OTPScreen} />
-      <Stack.Screen name="Dashboard" component={DashboardScreen} />
+      <Stack.Screen name="BottomTabDashboard" component={BottomTabDashboard} />
+      <Stack.Screen name="Filters" component={FilterScreen} />
     </Stack.Navigator>
   );
 }

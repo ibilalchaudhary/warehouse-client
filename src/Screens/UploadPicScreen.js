@@ -72,7 +72,17 @@ export default class UploadPicScreen extends Component {
                   pickerModalVisibility: true,
                 });
               }}
-              style={{left: 180, top: -30, backgroundColor: PRIMARY}}>
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                left: 180,
+                top: -32,
+                backgroundColor: PRIMARY,
+                width: 40,
+                height: 40,
+                borderRadius: 20,
+              }}>
               <Svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}
@@ -92,7 +102,7 @@ export default class UploadPicScreen extends Component {
               <View style={{justifyContent: 'flex-end', flex: 1}}>
                 <View
                   style={{
-                    padding: 20,
+                    padding: 40,
 
                     backgroundColor: WHITE,
                   }}>

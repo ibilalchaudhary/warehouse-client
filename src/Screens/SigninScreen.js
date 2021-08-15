@@ -132,7 +132,7 @@ export default class SigninScreen extends Component {
               <Buttons
                 placeholder="Sign In"
                 onPress={() => {
-                  navigation.navigate('Dashboard');
+                  navigation.navigate('BottomTabDashboard');
                 }}
               />
             </View>

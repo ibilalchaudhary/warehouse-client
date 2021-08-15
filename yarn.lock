@@ -1173,6 +1173,11 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/eslint-plugin/-/eslint-plugin-1.1.0.tgz#e42b1bef12d2415411519fd528e64b593b1363dc"
   integrity sha512-W/J0fNYVO01tioHjvYWQ9m6RgndVtbElzYozBq1ZPrHO/iCzlqoySHl4gO/fpCl9QEFjvJfjPgtPMTMlsoq5DQ==
 
+"@react-native-picker/picker@^1.16.5":
+  version "1.16.5"
+  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-1.16.5.tgz#f55f22bb8fcaec412170e8a1ac1c7b11818919e5"
+  integrity sha512-IYfMXdUsfQe4RBLJPZq6GoPkr2otOTZqej/gU93x+oIjrR+UCcCb0fsqmXHT8qX29E+0cEQZd/4bWnzbICHNrg==
+
 "@react-native/assets@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@react-native/assets/-/assets-1.0.0.tgz#c6f9bf63d274bafc8e970628de24986b30a55c8e"
@@ -5745,6 +5750,11 @@ react-native-gesture-handler@*:
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
     prop-types "^15.7.2"
+
+react-native-image-crop-picker@^0.36.2:
+  version "0.36.2"
+  resolved "https://registry.yarnpkg.com/react-native-image-crop-picker/-/react-native-image-crop-picker-0.36.2.tgz#fcb35c1a12d805bedbb6d94a87078e86a6c9b49f"
+  integrity sha512-cTauoEHHzx14ZHA7Pt65e7RVnbn1WRYQz2ufTZp9/05EtNDrdsXwNhgtXdWVFbOhYB8qgUFQjy2NelkBOHIH3g==
 
 react-native-pager-view@^5.4.0:
   version "5.4.0"

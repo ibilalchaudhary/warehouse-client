@@ -124,6 +124,7 @@ export default class InputBox extends Component {
             </TouchableOpacity>
           </TouchableOpacity>
           <TouchableOpacity
+            onPress={this.props.onPress}
             style={{
               width: 50,
               height: 50,

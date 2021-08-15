@@ -5,7 +5,8 @@ import Svg, {G, Path} from 'react-native-svg';
 
 export default function WarehouseCard() {
   return (
-    <TouchableOpacity style={{position: 'relative', marginRight: 22}}>
+    <TouchableOpacity
+      style={{position: 'relative', marginRight: 22, marginBottom: 12}}>
       <Image
         source={require('../Assets/warehouse__bg.png')}
         style={{borderRadius: 10, width: 180, height: 200}}
