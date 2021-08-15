@@ -7,14 +7,40 @@ import {
   TextInput,
   ScrollView,
   Image,
+  Modal,
 } from 'react-native';
 import Headings from '../Components/Headings';
-import {DARK, WHITE} from '../Constants/Colors';
+import {DARK, PRIMARY, WHITE} from '../Constants/Colors';
 import {height, width} from '../Constants/Dimensions';
 import Svg, {G, Path} from 'react-native-svg';
 import Buttons from '../Components/Buttons';
+import ImagePicker from 'react-native-image-crop-picker';
 
 export default class UploadPicScreen extends Component {
+  constructor() {
+    super();
+    this.state = {
+      pickerModalVisibility: false,
+    };
+  }
+  OpenCamera() {
+    ImagePicker.openCamera({
+      width: 300,
+      height: 400,
+      cropping: true,
+    }).then(image => {
+      console.log(image);
+    });
+  }
+  OpenPicker() {
+    ImagePicker.openPicker({
+      width: 300,
+      height: 400,
+      cropping: true,
+    }).then(image => {
+      console.log(image);
+    });
+  }
   render() {
     const navigation = this.props.navigation;
     return (
@@ -40,7 +66,13 @@ export default class UploadPicScreen extends Component {
                 style={{width: 150, height: 150}}
               />
             </View>
-            <TouchableOpacity style={{left: 180, top: -30}}>
+            <TouchableOpacity
+              onPress={() => {
+                this.setState({
+                  pickerModalVisibility: true,
+                });
+              }}
+              style={{left: 180, top: -30, backgroundColor: PRIMARY}}>
               <Svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}
@@ -53,6 +85,40 @@ export default class UploadPicScreen extends Component {
                 />
               </Svg>
             </TouchableOpacity>
+            <Modal
+              visible={this.state.pickerModalVisibility}
+              transparent={true}
+              animationType="slide">
+              <View style={{justifyContent: 'flex-end', flex: 1}}>
+                <View
+                  style={{
+                    padding: 20,
+
+                    backgroundColor: WHITE,
+                  }}>
+                  <Buttons
+                    placeholder="Open Camera"
+                    onPress={() => {
+                      this.OpenCamera;
+                    }}
+                  />
+                  <Buttons
+                    placeholder="Open Gallary"
+                    onPress={() => {
+                      this.OpenPicker;
+                    }}
+                  />
+                  <Buttons
+                    placeholder="Close"
+                    onPress={() => {
+                      this.setState({
+                        pickerModalVisibility: false,
+                      });
+                    }}
+                  />
+                </View>
+              </View>
+            </Modal>
             <View style={{marginVertical: 60}}>
               <Buttons
                 placeholder="Save"
