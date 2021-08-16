@@ -21,6 +21,9 @@ import Svg, {G, Path} from 'react-native-svg';
 import {height, width} from '../Constants/Dimensions';
 import Header from '../Components/Header';
 import InputBox from '../Components/InputBox';
+import Dropdown from '../Components/Dropdown';
+import RangeSlider from '../Components/RangeSlider';
+import Buttons from '../Components/Buttons';
 
 export default class FilterScreen extends Component {
   constructor(props) {
@@ -29,30 +32,24 @@ export default class FilterScreen extends Component {
       focus: false,
     };
   }
-  state = {user: ''};
-  updateUser = user => {
-    this.setState({user: user});
-  };
-
   render() {
     const navigation = this.props.navigation;
     return (
-      <View style={{backgroundColor: WHITE, width: width, height: height}}>
-        <ImageBackground
-          source={require('../Assets/main__background.png')}
+      <View style={{width: width, height: height}}>
+        <View
           style={{
+            backgroundColor: '#FAFAFA',
             height: height,
             flex: 1,
-            marginVertical: 12,
           }}>
+          <Header
+            heading="Filters"
+            onPress={() => {
+              navigation.navigate('BottomTabDashboard');
+            }}
+          />
           <ScrollView style={{flex: 1}}>
             <View style={{marginHorizontal: 18}}>
-              <Header
-                heading="Filter"
-                onPress={() => {
-                  navigation.navigate('BottomTabDashboard');
-                }}
-              />
               <InputBox
                 variant="Search"
                 svg={
@@ -116,7 +113,9 @@ export default class FilterScreen extends Component {
                     placeholderTextColor={SECONDARY}
                     style={{
                       marginLeft: 16,
-                      width: '100%',
+                      borderRightWidth: 1,
+                      borderRightColor: INPUT_BG,
+                      width: '83%',
                       color: DARK,
                     }}
                     onFocus={() => {
@@ -133,24 +132,106 @@ export default class FilterScreen extends Component {
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={{
-                    width: 90,
-                    height: 40,
-                    borderLeftWidth: 1,
-                    borderLeftColor: INPUT_BG,
+                    width: 94,
+                    height: 50,
+                    marginLeft: 10,
                   }}>
-                  <Picker
-                    selectedValue={this.state.user}
-                    onValueChange={this.updateUser}>
-                    <Picker.Item label="40km" value="40km" />
-                    <Picker.Item label="20km" value="20km" />
-                    <Picker.Item label="20km" value="20km" />
-                  </Picker>
-                  <Text>{this.state.user}</Text>
+                  <Dropdown label="4km" value="" />
                 </TouchableOpacity>
+              </View>
+              <View
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  marginTop: 16,
+                }}>
+                <View
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}>
+                  <Text>Product Type</Text>
+                  <TouchableOpacity
+                    style={{
+                      display: 'flex',
+                      marginVertical: 8,
+                      width: 145,
+                      height: 50,
+                      borderRadius: 8,
+                      backgroundColor: WHITE,
+                    }}>
+                    <Dropdown label="Food" value="" />
+                  </TouchableOpacity>
+                </View>
+                <View style={{display: 'flex', flexDirection: 'column'}}>
+                  <Text>Area</Text>
+                  <TouchableOpacity
+                    style={{
+                      display: 'flex',
+                      marginVertical: 8,
+                      width: 145,
+                      height: 50,
+                      borderRadius: 8,
+                      backgroundColor: WHITE,
+                    }}>
+                    <Dropdown label="5ft" value="" />
+                  </TouchableOpacity>
+                </View>
+              </View>
+              <View
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  marginTop: 10,
+                }}>
+                <View
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}>
+                  <Text>Volume</Text>
+                  <TouchableOpacity
+                    style={{
+                      display: 'flex',
+                      marginVertical: 8,
+                      width: 145,
+                      height: 50,
+                      borderRadius: 8,
+                      backgroundColor: WHITE,
+                    }}>
+                    <Dropdown label="5" value="" />
+                  </TouchableOpacity>
+                </View>
+                <View style={{display: 'flex', flexDirection: 'column'}}>
+                  <Text>Booking</Text>
+                  <TouchableOpacity
+                    style={{
+                      display: 'flex',
+                      marginVertical: 8,
+                      width: 145,
+                      height: 50,
+                      borderRadius: 8,
+                      backgroundColor: WHITE,
+                    }}>
+                    <Dropdown label="Advance" value="" />
+                  </TouchableOpacity>
+                </View>
+              </View>
+              <RangeSlider />
+              <RangeSlider />
+              <View style={{display: 'flex', marginVertical: 50}}>
+                <Buttons
+                  onPress={() => {
+                    navigation.navigate('SearchResult');
+                  }}
+                  placeholder="Filter"
+                />
               </View>
             </View>
           </ScrollView>
-        </ImageBackground>
+        </View>
       </View>
     );
   }

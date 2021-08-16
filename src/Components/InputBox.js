@@ -65,6 +65,7 @@ export default class InputBox extends Component {
         </TouchableOpacity>
       );
     } else if (this.props.variant === 'Search') {
+      const backgroundColor = false;
       return (
         <View
           style={{
@@ -84,7 +85,7 @@ export default class InputBox extends Component {
               marginTop: 12,
               borderRadius: 8,
               alignContent: 'center',
-              backgroundColor: INPUT_BG,
+              backgroundColor: backgroundColor ? INPUT_BG : WHITE,
             }}>
             <TextInput
               style={{width: '80%', color: TEXT_COLOR}}
