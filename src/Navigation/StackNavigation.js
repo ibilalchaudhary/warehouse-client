@@ -14,6 +14,7 @@ import BottomTabDashboard from './BottomTabDashboard';
 import FilterScreen from '../Screens/FilterScreen';
 import SearchResultScreen from '../Screens/SearchResultScreen';
 import WarehouseCardDetailsScreen from '../Screens/WarehouseCardDetailsScreen';
+import MapViewScreen from '../Screens/MapViewScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,7 @@ export default function StackNavigation() {
       <Stack.Screen name="OTP" component={OTPScreen} />
       <Stack.Screen name="BottomTabDashboard" component={BottomTabDashboard} />
       <Stack.Screen name="Filters" component={FilterScreen} />
+      <Stack.Screen name="Map" component={MapViewScreen} />
       <Stack.Screen name="SearchResult" component={SearchResultScreen} />
       <Stack.Screen
         name="WarehouseCardDetails"

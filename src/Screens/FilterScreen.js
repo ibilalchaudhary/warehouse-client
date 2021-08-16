@@ -73,6 +73,9 @@ export default class FilterScreen extends Component {
                   borderWidth: 1,
                 }}>
                 <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate('Map');
+                  }}
                   style={{
                     display: 'flex',
                     flexDirection: 'row',
