@@ -35,6 +35,7 @@ export default function Header({onPress, heading}) {
           style={{
             marginLeft: 10,
             fontSize: 20,
+            fontWeight: 'bold',
             color: TEXT_COLOR,
           }}>
           {heading}

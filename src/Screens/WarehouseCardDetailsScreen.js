@@ -1,24 +1,10 @@
 import React, {Component} from 'react';
-import {
-  DARK,
-  DISABLE,
-  INPUT_BG,
-  PRIMARY,
-  SECONDARY,
-  TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
-import {
-  View,
-  Text,
-  ImageBackground,
-  TouchableOpacity,
-  ScrollView,
-  Image,
-} from 'react-native';
+import {PRIMARY, SECONDARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
+import {View, ScrollView, Image, Text, TouchableOpacity} from 'react-native';
 import Svg, {G, Path} from 'react-native-svg';
 import {height, width} from '../Constants/Dimensions';
 import Header from '../Components/Header';
+import WarehouseMainCard from '../Components/WarehouseMainCard';
 
 export default class WarehouseCardDetailsScreen extends Component {
   constructor(props) {
@@ -46,213 +32,160 @@ export default class WarehouseCardDetailsScreen extends Component {
 
           <ScrollView style={{flex: 1}}>
             <View style={{flex: 1, marginHorizontal: 18}}>
+              <WarehouseMainCard />
               <View
                 style={{
-                  position: 'relative',
-                  marginBottom: 12,
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  marginVertical: 6,
+                  alignItems: 'center',
                 }}>
-                <Image
-                  source={require('../Assets/warehouse__main__bg.png')}
-                  style={{borderRadius: 18, width: '100%', height: 260}}
-                />
+                <Text style={{fontSize: 16, fontWeight: 'bold'}}>
+                  Discription
+                </Text>
                 <View
                   style={{
-                    position: 'absolute',
-                    marginHorizontal: 12,
-                    marginTop: 125,
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
                   }}>
-                  <Text
-                    style={{
-                      fontSize: 22,
-                      fontWeight: 'bold',
-                      color: WHITE,
-                    }}>
-                    Creatv Hub
+                  <Svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={11.93}
+                    height={11.078}
+                    viewBox="0 0 11.93 11.078">
+                    <Path
+                      data-name="Icon ionic-ios-star"
+                      d="M11.477 3.835H7.56L6.37.282a.431.431 0 00-.81 0L4.37 3.835H.426A.427.427 0 000 4.261a.313.313 0 00.008.072.409.409 0 00.178.3l3.219 2.269-1.235 3.593a.427.427 0 00.146.479.412.412 0 00.24.1.522.522 0 00.266-.1l3.142-2.24 3.142 2.24a.5.5 0 00.266.1.383.383 0 00.237-.1.422.422 0 00.146-.479L8.519 6.903l3.193-2.29.077-.067a.407.407 0 00-.314-.711z"
+                      fill="#f80"
+                    />
+                  </Svg>
+                  <Text style={{marginLeft: 6, fontSize: 14, color: '#f80'}}>
+                    4.6
                   </Text>
-                  <View
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      marginBottom: 8,
-                    }}>
-                    <Svg
-                      style={{marginRight: 12}}
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={14.74}
-                      height={14.74}
-                      viewBox="0 0 12.74 12.74">
-                      <Path
-                        data-name="Icon awesome-location-arrow"
-                        d="M11.061.088L.715 4.863a1.206 1.206 0 00.478 2.308H5.57v4.377a1.206 1.206 0 002.308.478l4.775-10.347A1.241 1.241 0 0011.061.088z"
-                        fill="#27ae61"
-                      />
-                    </Svg>
-                    <Text style={{color: WHITE, fontSize: 16}}>53</Text>
-                  </View>
-                  <View
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}>
-                    <View
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                      }}>
-                      <View
-                        style={{
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          marginRight: 12,
-                          width: 30,
-                          height: 30,
-                          borderRadius: 6,
-                          backgroundColor: '#474747',
-                        }}>
-                        <Svg
-                          data-name="video-camera (2)"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width={16.329}
-                          height={16.922}
-                          viewBox="0 0 18.329 10.922">
-                          <Path
-                            data-name="Path 2329"
-                            d="M11.834 0H1.273A1.274 1.274 0 000 1.273v8.376a1.274 1.274 0 001.273 1.273h10.561a1.274 1.274 0 001.273-1.273V1.273A1.274 1.274 0 0011.834 0zm0 0"
-                            fill="#fff"
-                          />
-                          <Path
-                            data-name="Path 2330"
-                            d="M13.955 7.205l4.374 2.388V1.357l-4.374 2.388zm0 0"
-                            fill="#fff"
-                          />
-                        </Svg>
-                      </View>
-                      <Text style={{color: WHITE}}>3 Camera</Text>
-                    </View>
-                    <View
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'flex-end',
-                        alignContent: 'flex-end',
-                        marginLeft: 120,
-                      }}>
-                      <Text
-                        style={{
-                          color: PRIMARY,
-                          fontSize: 18,
-                          fontWeight: 'bold',
-                        }}>
-                        $5 /
-                      </Text>
-                      <Text style={{color: PRIMARY, fontSize: 12}}>unit</Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      marginTop: 8,
-                    }}>
-                    <View
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                      }}>
-                      <View
-                        style={{
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          marginRight: 12,
-                          width: 28,
-                          height: 28,
-                          borderRadius: 6,
-                          backgroundColor: '#474747',
-                        }}>
-                        <Svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width={14.667}
-                          height={14.561}
-                          viewBox="0 0 19.667 14.561">
-                          <G data-name="Group 934">
-                            <G data-name="Group 933">
-                              <Path
-                                data-name="Path 2324"
-                                d="M15.506 5.862H4.16l-.681 3.026h12.708z"
-                                fill="#fff"
-                              />
-                            </G>
-                          </G>
-                          <G data-name="Group 936">
-                            <G data-name="Group 935">
-                              <Path
-                                data-name="Path 2325"
-                                d="M17.965 0H1.7A1.7 1.7 0 000 1.7v5.484a1.7 1.7 0 001.7 1.7h.615l.836-3.717a.567.567 0 01.553-.443H15.96a.567.567 0 01.553.443l.836 3.717h.615a1.7 1.7 0 001.7-1.7V1.702A1.7 1.7 0 0017.965 0zm-5.106 3.971H12.1a.567.567 0 110-1.135h.756a.567.567 0 110 1.135zm2.647 0h-.756a.567.567 0 110-1.135h.756a.567.567 0 110 1.135z"
-                                fill="#fff"
-                              />
-                            </G>
-                          </G>
-                          <G data-name="Group 938">
-                            <G data-name="Group 937">
-                              <Path
-                                data-name="Path 2326"
-                                d="M10.212 11.472a.521.521 0 01.108-.338 1.632 1.632 0 00.27-.922.567.567 0 00-1.135 0 .521.521 0 01-.108.338 1.71 1.71 0 000 1.844.583.583 0 010 .677 1.633 1.633 0 00-.27.922.567.567 0 001.135 0 .521.521 0 01.108-.339 1.711 1.711 0 000-1.845.522.522 0 01-.108-.337z"
-                                fill="#fff"
-                              />
-                            </G>
-                          </G>
-                          <G data-name="Group 940">
-                            <G data-name="Group 939">
-                              <Path
-                                data-name="Path 2327"
-                                d="M7.186 11.472a.521.521 0 01.108-.338 1.632 1.632 0 00.27-.922.567.567 0 00-1.135 0 .521.521 0 01-.108.338 1.71 1.71 0 000 1.844.583.583 0 010 .677 1.633 1.633 0 00-.27.922.567.567 0 001.135 0 .521.521 0 01.108-.339 1.711 1.711 0 000-1.845.522.522 0 01-.108-.337z"
-                                fill="#fff"
-                              />
-                            </G>
-                          </G>
-                          <G data-name="Group 942">
-                            <G data-name="Group 941">
-                              <Path
-                                data-name="Path 2328"
-                                d="M13.238 11.472a.521.521 0 01.108-.338 1.632 1.632 0 00.27-.922.567.567 0 00-1.135 0 .521.521 0 01-.108.338 1.71 1.71 0 000 1.844.583.583 0 010 .677 1.633 1.633 0 00-.27.922.567.567 0 001.135 0 .521.521 0 01.108-.339 1.711 1.711 0 000-1.845.522.522 0 01-.108-.337z"
-                                fill="#fff"
-                              />
-                            </G>
-                          </G>
-                        </Svg>
-                      </View>
-                      <Text style={{color: WHITE}}>3 Refreg</Text>
-                    </View>
-                    <View
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'flex-end',
-                        alignContent: 'flex-end',
-                        marginLeft: 74,
-                      }}>
-                      <Text
-                        style={{
-                          color: WHITE,
-                          fontSize: 24,
-                          fontWeight: 'bold',
-                        }}>
-                        $50 /
-                      </Text>
-                      <Text style={{color: WHITE, fontSize: 16}}>per day</Text>
-                    </View>
-                  </View>
                 </View>
               </View>
+              <Text style={{fontSize: 12, color: SECONDARY}}>
+                Lorem ipsum, in graphical and textual context, refers to filler
+                text that is placed in a document or visual presentation.
+              </Text>
+              <TouchableOpacity
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  marginTop: -16,
+                  marginRight: 18,
+                }}>
+                <Text></Text>
+                <Text style={{color: PRIMARY, fontSize: 12}}>See more</Text>
+              </TouchableOpacity>
+
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: PRIMARY,
+                  marginTop: 8,
+                  fontWeight: 'bold',
+                }}>
+                Representative
+              </Text>
+              <TouchableOpacity
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  height: 70,
+                  borderRadius: 8,
+                  backgroundColor: WHITE,
+                  marginVertical: 8,
+                  padding: 12,
+                }}>
+                <View
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                  }}>
+                  <Image
+                    source={require('../Assets/userPic.png')}
+                    style={{width: 50, height: 50, marginRight: 12}}
+                  />
+                  <View style={{display: 'flex', flexDirection: 'column'}}>
+                    <Text
+                      style={{
+                        fontSize: 14,
+                        color: TEXT_COLOR,
+                        fontWeight: 'bold',
+                      }}>
+                      Asim Rasheed
+                    </Text>
+                    <Text style={{color: SECONDARY}}>Lahore</Text>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                  }}>
+                  <TouchableOpacity
+                    style={{
+                      justifyContent: 'center',
+                      marginRight: 6,
+                      alignItems: 'center',
+                      width: 40,
+                      height: 40,
+                      borderRadius: 8,
+                      backgroundColor: PRIMARY,
+                    }}>
+                    <Svg
+                      data-name="Icon awesome-phone-alt"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={15.833}
+                      height={15.833}
+                      viewBox="0 0 15.833 15.833">
+                      <Path
+                        data-name="Icon awesome-phone-alt"
+                        d="M15.382 11.189L11.918 9.7a.742.742 0 00-.866.213l-1.534 1.879a11.463 11.463 0 01-5.48-5.48l1.875-1.534a.74.74 0 00.213-.866L4.642.449a.747.747 0 00-.85-.43L.575.761A.742.742 0 000 1.485a14.348 14.348 0 0014.349 14.349.742.742 0 00.724-.575l.742-3.216a.751.751 0 00-.433-.854z"
+                        fill="#fff"
+                      />
+                    </Svg>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      width: 40,
+                      height: 40,
+                      borderRadius: 8,
+                      backgroundColor: PRIMARY,
+                    }}>
+                    <Svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={16.5}
+                      height={16.5}
+                      viewBox="0 0 16.5 16.5">
+                      <Path
+                        data-name="Icon material-message"
+                        d="M14.85 0H1.65A1.648 1.648 0 00.008 1.65L0 16.5l3.3-3.3h11.55a1.655 1.655 0 001.65-1.65v-9.9A1.655 1.655 0 0014.85 0zM13.2 9.9H3.3V8.25h9.9zm0-2.475H3.3v-1.65h9.9zm0-2.475H3.3V3.3h9.9z"
+                        fill="#fff"
+                      />
+                    </Svg>
+                  </TouchableOpacity>
+                </View>
+              </TouchableOpacity>
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: TEXT_COLOR,
+                  marginTop: 8,
+                  fontWeight: 'bold',
+                }}>
+                Gallery
+              </Text>
             </View>
           </ScrollView>
         </View>

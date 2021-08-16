@@ -151,6 +151,7 @@ export default class SigninScreen extends Component {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
+                marginBottom: 50,
               }}>
               <Text>Already have a account?</Text>
               <TouchableOpacity

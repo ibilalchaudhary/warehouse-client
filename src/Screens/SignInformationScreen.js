@@ -185,6 +185,7 @@ export default class SignInformationScreen extends Component {
                 justifyContent: 'center',
                 alignItems: 'center',
                 marginTop: 120,
+                marginBottom: 50,
               }}>
               <Buttons
                 placeholder="Save"

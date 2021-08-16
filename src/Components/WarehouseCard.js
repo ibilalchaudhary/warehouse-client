@@ -14,8 +14,8 @@ export default function WarehouseCard() {
       <View
         style={{
           position: 'absolute',
-          marginLeft: 6,
-          marginTop: 120,
+          padding: 8,
+          marginTop: 110,
         }}>
         <Text style={{fontSize: 22, fontWeight: 'bold', color: WHITE}}>
           Creatv Hub

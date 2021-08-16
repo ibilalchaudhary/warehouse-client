@@ -183,6 +183,7 @@ export default class SignupScreen extends Component {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
+                marginBottom: 50,
               }}>
               <Text>Already have a account?</Text>
               <TouchableOpacity

@@ -25,8 +25,8 @@ export default function WarehouseMainCard() {
       <View
         style={{
           position: 'absolute',
-          marginHorizontal: 12,
-          marginTop: 125,
+          marginTop: 100,
+          padding: 18,
         }}>
         <Text
           style={{
