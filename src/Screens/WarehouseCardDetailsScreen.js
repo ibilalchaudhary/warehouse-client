@@ -5,12 +5,14 @@ import Svg, {G, Path} from 'react-native-svg';
 import {height, width} from '../Constants/Dimensions';
 import Header from '../Components/Header';
 import WarehouseMainCard from '../Components/WarehouseMainCard';
+import ImageZoom from 'react-native-image-pan-zoom';
 
 export default class WarehouseCardDetailsScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
       focus: false,
+      galleryImage: require('../Assets/galleryPic.png'),
     };
   }
   render() {
@@ -31,7 +33,7 @@ export default class WarehouseCardDetailsScreen extends Component {
           />
 
           <ScrollView style={{flex: 1}}>
-            <View style={{flex: 1, marginHorizontal: 18}}>
+            <View style={{flex: 1, marginHorizontal: 18, paddingBottom: 50}}>
               <WarehouseMainCard />
               <View
                 style={{
@@ -186,6 +188,65 @@ export default class WarehouseCardDetailsScreen extends Component {
                 }}>
                 Gallery
               </Text>
+              <View>
+                <ImageZoom
+                  cropWidth={270}
+                  cropHeight={300}
+                  imageWidth={300}
+                  imageHeight={270}>
+                  <Image
+                    source={this.state.galleryImage}
+                    style={{width: '100%', height: '100%', borderRadius: 10}}
+                  />
+                </ImageZoom>
+                <ScrollView horizontal={true}>
+                  <TouchableOpacity
+                    onPress={() => {
+                      this.setState({
+                        galleryImage: require('../Assets/galleryPic.png'),
+                      });
+                    }}
+                    style={{width: 80, height: 80, marginRight: 15}}>
+                    <Image
+                      source={require('../Assets/galleryPic.png')}
+                      style={{width: '100%', height: '100%', borderRadius: 10}}
+                    />
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => {
+                      this.setState({
+                        galleryImage: require('../Assets/warehouse__bg.png'),
+                      });
+                    }}
+                    style={{width: 80, height: 80, marginRight: 15}}>
+                    <Image
+                      source={require('../Assets/warehouse__bg.png')}
+                      style={{width: '100%', height: '100%', borderRadius: 10}}
+                    />
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{width: 80, height: 80, marginRight: 15}}>
+                    <Image
+                      source={require('../Assets/galleryPic.png')}
+                      style={{width: '100%', height: '100%', borderRadius: 10}}
+                    />
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{width: 80, height: 80, marginRight: 15}}>
+                    <Image
+                      source={require('../Assets/galleryPic.png')}
+                      style={{width: '100%', height: '100%', borderRadius: 10}}
+                    />
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{width: 80, height: 80, marginRight: 15}}>
+                    <Image
+                      source={require('../Assets/galleryPic.png')}
+                      style={{width: '100%', height: '100%', borderRadius: 10}}
+                    />
+                  </TouchableOpacity>
+                </ScrollView>
+              </View>
             </View>
           </ScrollView>
         </View>
