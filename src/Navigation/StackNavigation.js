@@ -9,7 +9,6 @@ import SigninScreen from '../Screens/SigninScreen';
 import UploadPicScreen from '../Screens/UploadPicScreen';
 import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen';
 import OTPScreen from '../Screens/OTPScreen';
-import DashboardScreen from '../Screens/DashboardScreen';
 import BottomTabDashboard from './BottomTabDashboard';
 import FilterScreen from '../Screens/FilterScreen';
 import SearchResultScreen from '../Screens/SearchResultScreen';
@@ -18,6 +17,10 @@ import MapViewScreen from '../Screens/MapViewScreen';
 import ChooseCardScreen from '../Screens/ChooseCardScreen';
 import AddCardScreen from '../Screens/AddCardScreen';
 import EditCardScreen from '../Screens/EditCardScreen';
+import AdvanceBookingScreen from '../Screens/AdvanceBookingScreen';
+import BookingScreen from '../Screens/BookingScreen';
+import CheckoutScreen from '../Screens/CheckoutScreen';
+import OrderCompleteScreen from '../Screens/OrderCompleteScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,7 +28,7 @@ export default function StackNavigation() {
   return (
     <Stack.Navigator
       screenOptions={{header: () => null}}
-      initialRouteName="AddCard">
+      initialRouteName="Discover">
       <Stack.Screen name="Discover" component={DiscoverScreen} />
       <Stack.Screen name="Explore" component={ExploreScreen} />
       <Stack.Screen name="Signup" component={SignupScreen} />
@@ -45,6 +48,9 @@ export default function StackNavigation() {
         name="WarehouseCardDetails"
         component={WarehouseCardDetailsScreen}
       />
+      <Stack.Screen name="Booking" component={BookingScreen} />
+      <Stack.Screen name="Checkout" component={CheckoutScreen} />
+      <Stack.Screen name="OrderComplete" component={OrderCompleteScreen} />
     </Stack.Navigator>
   );
 }

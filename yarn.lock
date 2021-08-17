@@ -5743,6 +5743,11 @@ react-native-confirmation-code-input@^1.0.4:
     lodash "^4.17.4"
     prop-types "^15.5.10"
 
+react-native-date-picker@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/react-native-date-picker/-/react-native-date-picker-3.3.2.tgz#1e08ae1793112510cd19eaca900b3be3b21c7339"
+  integrity sha512-iLlze62sBPwHXaBz69eXPy8cA5vXWV21UaDflQ6TECDhOOQ5HTeDXqSHrQFNPqsYwfmHADGiQdKRnzRy5st2VA==
+
 react-native-dropdown-picker@^5.1.23:
   version "5.1.23"
   resolved "https://registry.yarnpkg.com/react-native-dropdown-picker/-/react-native-dropdown-picker-5.1.23.tgz#50a2124c95b2886df662be149802ab849daa6016"
@@ -5782,6 +5787,11 @@ react-native-maps@^0.28.0:
   integrity sha512-F+k5ZT9hhl+iXR1H+5ZcoHOEB5lPu9gCIwtA4lI/LoI9nfa9xFvr1vMiLIv44jzeGNzbE3+/R81IpcNDMJ5uDg==
   dependencies:
     "@types/geojson" "^7946.0.7"
+
+react-native-neat-date-picker@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-neat-date-picker/-/react-native-neat-date-picker-1.0.6.tgz#300c8e9c5c8875678cc7a0be6a256ac5121bd6e4"
+  integrity sha512-nxH3fzyiOiFRBlLJY7NZsMugNsAofN95pz1UDiXgBz8O8gXQEAlkh4tSu9ccM4fR7w4zfN+mNl6rzNw6X3XVIQ==
 
 react-native-pager-view@^5.4.0:
   version "5.4.0"

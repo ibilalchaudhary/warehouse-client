@@ -10,6 +10,7 @@ import {
   WHITE,
 } from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
+import Dropdown from './Dropdown';
 
 export default class InputBox extends Component {
   constructor(props) {
@@ -137,6 +138,58 @@ export default class InputBox extends Component {
               backgroundColor: PRIMARY,
             }}>
             {this.props.svg}
+          </TouchableOpacity>
+        </View>
+      );
+    } else if (this.props.variant === 'InputFilter') {
+      return (
+        <View
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            borderRadius: 8,
+            backgroundColor: WHITE,
+            marginVertical: 10,
+            height: 50,
+          }}>
+          <TouchableOpacity
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              width: '70%',
+              height: 40,
+            }}>
+            <TextInput
+              placeholder={this.props.placeholder}
+              placeholderTextColor={SECONDARY}
+              style={{
+                marginLeft: 16,
+                width: '90%',
+                color: DARK,
+              }}
+              onFocus={() => {
+                this.setState({
+                  focus: true,
+                });
+              }}
+              onBlur={() => {
+                this.setState({
+                  focus: false,
+                });
+              }}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              backgroundColor: INPUT_BG,
+              borderRadius: 8,
+              width: 100,
+              height: 50,
+              marginLeft: 10,
+            }}>
+            <Dropdown label={this.props.label} />
           </TouchableOpacity>
         </View>
       );

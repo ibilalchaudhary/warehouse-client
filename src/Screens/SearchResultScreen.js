@@ -22,7 +22,7 @@ import InputBox from '../Components/InputBox';
 import Buttons from '../Components/Buttons';
 import CardDetails from '../Components/CardDetails';
 
-export default class FilterScreen extends Component {
+export default class SearchResultScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,59 +32,54 @@ export default class FilterScreen extends Component {
   render() {
     const navigation = this.props.navigation;
     return (
-      <View style={{backgroundColor: WHITE, width: width, height: height}}>
-        <View
-          style={{
-            backgroundColor: '#FAFAFA',
-            height: height,
-            flex: 1,
-          }}>
-          <Header
-            heading="Search Results"
+      <View
+        style={{
+          backgroundColor: '#FAFAFA',
+          flex: 1,
+        }}>
+        <Header
+          heading="Search Results"
+          onPress={() => {
+            navigation.navigate('Filters');
+          }}
+        />
+        <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
+          <CardDetails
             onPress={() => {
-              navigation.navigate('Filters');
+              navigation.navigate('WarehouseCardDetails');
             }}
           />
-          <ScrollView style={{flex: 1}}>
-            <View style={{marginHorizontal: 18}}>
-              <CardDetails
-                onPress={() => {
-                  navigation.navigate('WarehouseCardDetails');
-                }}
-              />
-              <CardDetails
-                onPress={() => {
-                  navigation.navigate('WarehouseCardDetails');
-                }}
-              />
-              <CardDetails
-                onPress={() => {
-                  navigation.navigate('WarehouseCardDetails');
-                }}
-              />
-              <CardDetails
-                onPress={() => {
-                  navigation.navigate('WarehouseCardDetails');
-                }}
-              />
-              <CardDetails
-                onPress={() => {
-                  navigation.navigate('WarehouseCardDetails');
-                }}
-              />
-              <CardDetails
-                onPress={() => {
-                  navigation.navigate('WarehouseCardDetails');
-                }}
-              />
-              <CardDetails
-                onPress={() => {
-                  navigation.navigate('WarehouseCardDetails');
-                }}
-              />
-            </View>
-          </ScrollView>
-        </View>
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+        </ScrollView>
       </View>
     );
   }

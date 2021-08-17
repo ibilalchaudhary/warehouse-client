@@ -79,7 +79,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
           <CardEntry
@@ -87,7 +87,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
           <CardEntry
@@ -95,7 +95,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
           <CardEntry
@@ -103,7 +103,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
           <CardEntry
@@ -111,7 +111,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
           <CardEntry
@@ -119,7 +119,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
           <CardEntry
@@ -127,7 +127,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
           <CardEntry
@@ -135,7 +135,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
           <CardEntry
@@ -143,7 +143,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
           <CardEntry
@@ -151,7 +151,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
           <CardEntry
@@ -159,7 +159,7 @@ export default class ChooseCardScreen extends Component {
               navigation.navigate('EditCard');
             }}
             toPath={() => {
-              navigation.navigate('');
+              navigation.navigate('OrderComplete');
             }}
           />
         </ScrollView>
