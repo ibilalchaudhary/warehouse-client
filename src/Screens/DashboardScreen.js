@@ -5,19 +5,8 @@ import {
   ImageBackground,
   TouchableOpacity,
   ScrollView,
-  TextInput,
-  Image,
-  Dimensions,
 } from 'react-native';
-import {
-  DARK,
-  DISABLE,
-  INPUT_BG,
-  PRIMARY,
-  SECONDARY,
-  TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
+import {DISABLE, PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
 import {height, width} from '../Constants/Dimensions';
 import InputBox from '../Components/InputBox';
@@ -29,7 +18,6 @@ export default class DashboardScreen extends Component {
   render() {
     const navigation = this.props.navigation;
     const catagrories = ['Size', 'Health', 'Weight', 'Area', 'Height', 'Space'];
-    console.log(Dimensions.get('window').width);
     return (
       <View style={{backgroundColor: WHITE, width: width, height: height}}>
         <ImageBackground

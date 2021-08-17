@@ -15,6 +15,9 @@ import FilterScreen from '../Screens/FilterScreen';
 import SearchResultScreen from '../Screens/SearchResultScreen';
 import WarehouseCardDetailsScreen from '../Screens/WarehouseCardDetailsScreen';
 import MapViewScreen from '../Screens/MapViewScreen';
+import ChooseCardScreen from '../Screens/ChooseCardScreen';
+import AddCardScreen from '../Screens/AddCardScreen';
+import EditCardScreen from '../Screens/EditCardScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,7 +25,7 @@ export default function StackNavigation() {
   return (
     <Stack.Navigator
       screenOptions={{header: () => null}}
-      initialRouteName="Discover">
+      initialRouteName="AddCard">
       <Stack.Screen name="Discover" component={DiscoverScreen} />
       <Stack.Screen name="Explore" component={ExploreScreen} />
       <Stack.Screen name="Signup" component={SignupScreen} />
@@ -34,6 +37,9 @@ export default function StackNavigation() {
       <Stack.Screen name="BottomTabDashboard" component={BottomTabDashboard} />
       <Stack.Screen name="Filters" component={FilterScreen} />
       <Stack.Screen name="Map" component={MapViewScreen} />
+      <Stack.Screen name="ChooseCard" component={ChooseCardScreen} />
+      <Stack.Screen name="AddCard" component={AddCardScreen} />
+      <Stack.Screen name="EditCard" component={EditCardScreen} />
       <Stack.Screen name="SearchResult" component={SearchResultScreen} />
       <Stack.Screen
         name="WarehouseCardDetails"

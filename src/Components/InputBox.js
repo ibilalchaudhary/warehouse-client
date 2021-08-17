@@ -111,10 +111,10 @@ export default class InputBox extends Component {
                 <G
                   data-name="Icon feather-search"
                   fill="none"
-                  stroke="#797977"
+                  stroke={SECONDARY}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={3}>
+                  strokeWidth={2}>
                   <Path
                     data-name="Path 706"
                     d="M17.263 9.382A7.882 7.882 0 119.382 1.5a7.882 7.882 0 017.881 7.882z"
