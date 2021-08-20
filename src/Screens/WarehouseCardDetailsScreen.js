@@ -139,6 +139,9 @@ export default class WarehouseCardDetailsScreen extends Component {
               Representative
             </Text>
             <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('RepresentativeProfile');
+              }}
               style={{
                 display: 'flex',
                 flexDirection: 'row',

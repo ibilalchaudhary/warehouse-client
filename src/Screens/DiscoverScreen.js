@@ -9,39 +9,41 @@ export default class DiscoverScreen extends Component {
   render() {
     const navigation = this.props.navigation;
     return (
-      <View style={{backgroundColor: WHITE, width: width, height: height}}>
-        <ImageBackground
-          source={require('../Assets/discover.png')}
+      <ImageBackground
+        source={require('../Assets/discover.png')}
+        style={{
+          height: height,
+          flex: 1,
+          justifyContent: 'flex-end',
+        }}>
+        <View
           style={{
-            height: height,
-            flex: 1,
-            justifyContent: 'flex-end',
-            padding: 30,
+            display: 'flex',
+            marginHorizontal: 20,
           }}>
+          <Headings text="Discover" />
+          <View style={{marginBottom: 20}}>
+            <Text>
+              This application will help you to provide the your best warehouse
+              for others and earn money. This application will help you to
+              provide the your best warehouse for others and earn money.
+            </Text>
+          </View>
           <View
             style={{
-              display: 'flex',
+              alignItems: 'center',
+              alignContent: 'center',
+              marginVertical: 20,
             }}>
-            <Headings text="Discover" />
-            <View style={{marginBottom: 60}}>
-              <Text>
-                This application will help you to provide the your best
-                warehouse for others and earn money. This application will help
-                you to provide the your best warehouse for others and earn
-                money.
-              </Text>
-            </View>
-            <View style={{alignItems: 'center', alignContent: 'center'}}>
-              <Buttons
-                placeholder="Next"
-                onPress={() => {
-                  navigation.navigate('Explore');
-                }}
-              />
-            </View>
+            <Buttons
+              placeholder="Next"
+              onPress={() => {
+                navigation.navigate('Explore');
+              }}
+            />
           </View>
-        </ImageBackground>
-      </View>
+        </View>
+      </ImageBackground>
     );
   }
 }

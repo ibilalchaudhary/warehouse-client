@@ -11,7 +11,7 @@ export default function Header({onPress, heading}) {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginHorizontal: 18,
+        marginHorizontal: 20,
         paddingVertical: 20,
       }}>
       <TouchableOpacity onPress={onPress}>

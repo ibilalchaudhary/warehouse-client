@@ -2688,7 +2688,7 @@ export default class OrderCompleteScreen extends Component {
 
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('AdvanceBooking');
+              navigation.navigate('Request');
             }}
             style={{
               display: 'flex',

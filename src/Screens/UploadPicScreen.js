@@ -76,7 +76,7 @@ export default class UploadPicScreen extends Component {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                left: 180,
+                left: '55%',
                 top: -32,
                 backgroundColor: PRIMARY,
                 width: 40,
