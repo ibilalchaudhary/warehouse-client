@@ -33,7 +33,7 @@ export default function StackNavigation() {
   return (
     <Stack.Navigator
       screenOptions={{header: () => null}}
-      initialRouteName="Message">
+      initialRouteName="Discover">
       <Stack.Screen name="Discover" component={DiscoverScreen} />
       <Stack.Screen name="Explore" component={ExploreScreen} />
       <Stack.Screen name="Signup" component={SignupScreen} />
