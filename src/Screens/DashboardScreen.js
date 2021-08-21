@@ -49,7 +49,10 @@ export default class DashboardScreen extends Component {
                   Pakistan
                 </Text>
               </View>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('Notifications');
+                }}>
                 <Svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={22.476}

@@ -25,6 +25,7 @@ import RepresentativeProfileScreen from '../Screens/RepresentativeProfileScreen'
 import RequestScreen from '../Screens/RequestScreen';
 import EditProfileScreen from '../Screens/EditProfileScreen';
 import MessageScreen from '../Screens/MessageScreen';
+import NotificationsScreen from '../Screens/NotificationsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,7 +33,7 @@ export default function StackNavigation() {
   return (
     <Stack.Navigator
       screenOptions={{header: () => null}}
-      initialRouteName="RepresentativeProfile">
+      initialRouteName="Message">
       <Stack.Screen name="Discover" component={DiscoverScreen} />
       <Stack.Screen name="Explore" component={ExploreScreen} />
       <Stack.Screen name="Signup" component={SignupScreen} />
@@ -62,6 +63,7 @@ export default function StackNavigation() {
       <Stack.Screen name="Request" component={RequestScreen} />
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
       <Stack.Screen name="Message" component={MessageScreen} />
+      <Stack.Screen name="Notifications" component={NotificationsScreen} />
     </Stack.Navigator>
   );
 }
