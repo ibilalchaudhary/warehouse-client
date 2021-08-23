@@ -52,7 +52,7 @@ export default function WarehouseMainCard() {
             <Path
               data-name="Icon awesome-location-arrow"
               d="M11.061.088L.715 4.863a1.206 1.206 0 00.478 2.308H5.57v4.377a1.206 1.206 0 002.308.478l4.775-10.347A1.241 1.241 0 0011.061.088z"
-              fill="#27ae61"
+              fill={PRIMARY}
             />
           </Svg>
           <Text style={{color: WHITE, fontSize: 16}}>53</Text>

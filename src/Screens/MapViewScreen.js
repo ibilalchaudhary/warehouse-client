@@ -250,25 +250,25 @@ export default function MapViewScreen({navigation}) {
                   data-name="Path 2128"
                   d="M175.453,84.183a3.385,3.385,0,1,0-3.385-3.385A3.389,3.389,0,0,0,175.453,84.183Zm0-5.56a2.175,2.175,0,1,1-2.175,2.175A2.178,2.178,0,0,1,175.453,78.623Z"
                   transform="translate(-168.996 -74.291)"
-                  fill="#27af61"
+                  fill={PRIMARY}
                 />
                 <Path
                   id="Path_2129"
                   data-name="Path 2129"
                   d="M98.67,12.59c.917,1.241.549.759,3.19,4.53a.605.605,0,0,0,.992,0c2.653-3.789,2.288-3.309,3.19-4.53a15.394,15.394,0,0,0,2.377-4.015,6.25,6.25,0,0,0-.912-6.046h0a6.51,6.51,0,0,0-10.3,0,6.25,6.25,0,0,0-.912,6.046A15.392,15.392,0,0,0,98.67,12.59Zm-.507-9.321a5.3,5.3,0,0,1,8.387,0h0a5.075,5.075,0,0,1,.725,4.911,14.5,14.5,0,0,1-2.206,3.692c-.669.906-.469.629-2.713,3.845-2.241-3.213-2.044-2.939-2.713-3.845a14.5,14.5,0,0,1-2.206-3.692,5.075,5.075,0,0,1,.725-4.911Z"
                   transform="translate(-95.898 0)"
-                  fill="#27af61"
+                  fill={PRIMARY}
                 />
                 <Path
                   id="Path_2130"
                   data-name="Path 2130"
                   d="M109.445,370.459a.605.605,0,0,0-.835-.188l-1.72,1.086a.605.605,0,0,0,0,1.023l5.421,3.424a.605.605,0,0,0,.646,0l5.421-3.424a.605.605,0,0,0,0-1.023l-1.72-1.086a.6.6,0,1,0-.646,1.023l.911.575-4.288,2.708-4.288-2.708.911-.575A.6.6,0,0,0,109.445,370.459Z"
                   transform="translate(-106.177 -355.246)"
-                  fill="#27af61"
+                  fill={PRIMARY}
                 />
               </G>
             </Svg>
-            <Text style={{color: TEXT_COLOR, marginLeft: 15}}>Location</Text>
+            <Text style={{color: PRIMARY, marginLeft: 15}}>Location</Text>
           </View>
         </View>
         <View
@@ -329,7 +329,7 @@ export default function MapViewScreen({navigation}) {
                       data-name="Icon awesome-location-arrow"
                       d="M15.045.119.973,6.614a1.641,1.641,0,0,0,.65,3.139H7.576v5.954a1.641,1.641,0,0,0,3.139.65l6.5-14.072A1.689,1.689,0,0,0,15.045.119Z"
                       transform="translate(0 0)"
-                      fill="#27ae61"
+                      fill={PRIMARY}
                     />
                   </Svg>
                   <Text style={{marginLeft: 10, color: '#ffffff'}}>Lahore</Text>
@@ -356,7 +356,7 @@ export default function MapViewScreen({navigation}) {
                         data-name="Icon zocial-myspace"
                         d="M-1.41,24.336V16.848h3v4.429H18.809V16.848h3.017v7.488Z"
                         transform="translate(1.41 -16.848)"
-                        fill="#27ae61"
+                        fill={PRIMARY}
                       />
                     </Svg>
                     <Text style={{marginLeft: 10, color: '#ffffff'}}>

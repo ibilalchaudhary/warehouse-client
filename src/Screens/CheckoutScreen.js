@@ -6,7 +6,14 @@ import {
   TEXT_COLOR,
   WHITE,
 } from '../Constants/Colors';
-import {View, ScrollView, Image, Text, TouchableOpacity} from 'react-native';
+import {
+  View,
+  ScrollView,
+  Image,
+  Text,
+  TouchableOpacity,
+  ImageBackground,
+} from 'react-native';
 import Svg, {G, Path} from 'react-native-svg';
 import {height, width} from '../Constants/Dimensions';
 import Header from '../Components/Header';
@@ -23,7 +30,7 @@ function AreaCard({area, text, borderWidth}) {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        width: '22%',
+        width: '30%',
         borderRightWidth: borderWidth,
         paddingRight: 22,
         borderColor: SECONDARY,
@@ -63,13 +70,11 @@ export default class CheckoutScreen extends Component {
     const navigation = this.props.navigation;
 
     return (
-      <View
-        style={{
-          backgroundColor: '#F0F0F0',
-          flex: 1,
-        }}>
+      <ImageBackground
+        source={require('../Assets/main__background.png')}
+        style={{flex: 1, height: height}}>
         <Header
-          heading="Creatv Hub"
+          heading="Summary + Checkout"
           onPress={() => {
             navigation.navigate('Filters');
           }}
@@ -92,7 +97,6 @@ export default class CheckoutScreen extends Component {
               </Text>
               <View
                 style={{
-                  display: 'flex',
                   flexDirection: 'row',
                   justifyContent: 'space-between',
                   alignItems: 'center',
@@ -100,17 +104,27 @@ export default class CheckoutScreen extends Component {
                 }}>
                 <AreaCard area="5ft" text="length" borderWidth={1} />
                 <AreaCard area="2ft" text="Volume" borderWidth={1} />
-                <AreaCard area="7ft" text="Area" borderWidth={1} />
-                <AreaCard area="5ft" text="Available" />
+                <AreaCard area="7ft" text="Area" />
               </View>
+
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: TEXT_COLOR,
+                  marginTop: 8,
+                  fontWeight: 'bold',
+                  marginTop: 12,
+                }}>
+                Categories
+              </Text>
               <View
                 style={{
-                  display: 'flex',
                   flexDirection: 'row',
                   alignItems: 'center',
                   marginVertical: 12,
                 }}>
-                <AreaCard area="2ft" text="Rating" borderWidth={1} />
+                <AreaCard area="5ft" text="length" borderWidth={1} />
+                <AreaCard area="7ft" text="Area" />
               </View>
               <Text
                 style={{
@@ -129,6 +143,7 @@ export default class CheckoutScreen extends Component {
                   display: 'flex',
                   flexDirection: 'row',
                   justifyContent: 'space-between',
+                  alignItems: 'center',
                   height: 70,
                   borderRadius: 8,
                   backgroundColor: WHITE,
@@ -157,83 +172,38 @@ export default class CheckoutScreen extends Component {
                     <Text style={{color: SECONDARY}}>Lahore</Text>
                   </View>
                 </View>
-                <View
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                  }}>
-                  <TouchableOpacity
-                    style={{
-                      justifyContent: 'center',
-                      marginRight: 6,
-                      alignItems: 'center',
-                      width: 40,
-                      height: 40,
-                      borderRadius: 8,
-                      backgroundColor: PRIMARY,
-                    }}>
-                    <Svg
-                      data-name="Icon awesome-phone-alt"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={15.833}
-                      height={15.833}
-                      viewBox="0 0 15.833 15.833">
-                      <Path
-                        data-name="Icon awesome-phone-alt"
-                        d="M15.382 11.189L11.918 9.7a.742.742 0 00-.866.213l-1.534 1.879a11.463 11.463 0 01-5.48-5.48l1.875-1.534a.74.74 0 00.213-.866L4.642.449a.747.747 0 00-.85-.43L.575.761A.742.742 0 000 1.485a14.348 14.348 0 0014.349 14.349.742.742 0 00.724-.575l.742-3.216a.751.751 0 00-.433-.854z"
-                        fill="#fff"
-                      />
-                    </Svg>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={{
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      width: 40,
-                      height: 40,
-                      borderRadius: 8,
-                      backgroundColor: PRIMARY,
-                    }}>
-                    <Svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={16.5}
-                      height={16.5}
-                      viewBox="0 0 16.5 16.5">
-                      <Path
-                        data-name="Icon material-message"
-                        d="M14.85 0H1.65A1.648 1.648 0 00.008 1.65L0 16.5l3.3-3.3h11.55a1.655 1.655 0 001.65-1.65v-9.9A1.655 1.655 0 0014.85 0zM13.2 9.9H3.3V8.25h9.9zm0-2.475H3.3v-1.65h9.9zm0-2.475H3.3V3.3h9.9z"
-                        fill="#fff"
-                      />
-                    </Svg>
-                  </TouchableOpacity>
-                </View>
-              </TouchableOpacity>
 
-              <View
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  marginVertical: 10,
-                }}>
-                <Text
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate('Message');
+                  }}
                   style={{
-                    fontSize: 16,
-                    color: TEXT_COLOR,
-                    fontWeight: 'bold',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: 40,
+                    height: 40,
+                    borderRadius: 8,
+                    backgroundColor: PRIMARY,
                   }}>
-                  Categories
-                </Text>
-                <CategoriesShowCase text="Food" />
-              </View>
+                  <Svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16.5}
+                    height={16.5}
+                    viewBox="0 0 16.5 16.5">
+                    <Path
+                      data-name="Icon material-message"
+                      d="M14.85 0H1.65A1.648 1.648 0 00.008 1.65L0 16.5l3.3-3.3h11.55a1.655 1.655 0 001.65-1.65v-9.9A1.655 1.655 0 0014.85 0zM13.2 9.9H3.3V8.25h9.9zm0-2.475H3.3v-1.65h9.9zm0-2.475H3.3V3.3h9.9z"
+                      fill="#fff"
+                    />
+                  </Svg>
+                </TouchableOpacity>
+              </TouchableOpacity>
               <View
                 style={{
                   display: 'flex',
                   flexDirection: 'row',
                   justifyContent: 'space-between',
+                  marginVertical: 10,
                 }}>
                 <View></View>
                 <View
@@ -255,7 +225,7 @@ export default class CheckoutScreen extends Component {
                   </Text>
                 </View>
               </View>
-              <View style={{marginVertical: 50}}>
+              <View style={{marginVertical: 10}}>
                 <Buttons
                   placeholder="Checkout"
                   onPress={() => {
@@ -266,7 +236,7 @@ export default class CheckoutScreen extends Component {
             </View>
           </View>
         </ScrollView>
-      </View>
+      </ImageBackground>
     );
   }
 }

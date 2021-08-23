@@ -36,7 +36,7 @@ function CategoriesShowCase({text}) {
   return (
     <View
       style={{
-        backgroundColor: WHITE,
+        backgroundColor: 'transparent',
         borderWidth: 1,
         borderColor: PRIMARY,
         width: 80,
@@ -44,7 +44,7 @@ function CategoriesShowCase({text}) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 12,
+        borderRadius: 8,
         marginVertical: 8,
         marginRight: 8,
       }}>
@@ -67,7 +67,7 @@ export default class WarehouseCardDetailsScreen extends Component {
     return (
       <View
         style={{
-          backgroundColor: '#F0F0F0',
+          backgroundColor: '#F8F8F8',
           flex: 1,
         }}>
         <Header
@@ -115,7 +115,7 @@ export default class WarehouseCardDetailsScreen extends Component {
             </View>
             <Text style={{fontSize: 12, color: SECONDARY}}>
               Lorem ipsum, in graphical and textual context, refers to filler
-              text that is placed in a document or visual presentation.
+              text that is placed.Lorem ipsum, in graphical and textual context.
             </Text>
             <TouchableOpacity
               style={{
@@ -123,7 +123,7 @@ export default class WarehouseCardDetailsScreen extends Component {
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 marginTop: -16,
-                marginRight: 18,
+                marginRight: 26,
               }}>
               <Text></Text>
               <Text style={{color: PRIMARY, fontSize: 12}}>See more</Text>
@@ -131,10 +131,71 @@ export default class WarehouseCardDetailsScreen extends Component {
 
             <Text
               style={{
-                fontSize: 16,
+                fontSize: 14,
                 color: PRIMARY,
                 marginTop: 8,
-                fontWeight: 'bold',
+              }}>
+              Owner
+            </Text>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('RepresentativeProfile');
+              }}
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                height: 70,
+                borderRadius: 8,
+                backgroundColor: WHITE,
+                marginVertical: 8,
+                padding: 12,
+              }}>
+              <View
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={require('../Assets/userPic.png')}
+                  style={{width: 50, height: 50, marginRight: 12}}
+                />
+                <View style={{display: 'flex', flexDirection: 'column'}}>
+                  <Text
+                    style={{
+                      fontSize: 14,
+                      color: TEXT_COLOR,
+                      fontWeight: 'bold',
+                    }}>
+                    Asim Rasheed
+                  </Text>
+                  <View
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                    }}>
+                    <Text
+                      style={{
+                        color: SECONDARY,
+                        fontSize: 12,
+                        marginRight: 30,
+                      }}>
+                      adam@gmail.com
+                    </Text>
+                    <Text style={{color: SECONDARY, fontSize: 12}}>
+                      +92303-7687302
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </TouchableOpacity>
+            <Text
+              style={{
+                fontSize: 14,
+                color: PRIMARY,
+                marginTop: 8,
               }}>
               Representative
             </Text>
@@ -146,6 +207,7 @@ export default class WarehouseCardDetailsScreen extends Component {
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
+                alignItems: 'center',
                 height: 70,
                 borderRadius: 8,
                 backgroundColor: WHITE,
@@ -174,58 +236,31 @@ export default class WarehouseCardDetailsScreen extends Component {
                   <Text style={{color: SECONDARY}}>Lahore</Text>
                 </View>
               </View>
-              <View
+
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('Message');
+                }}
                 style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
+                  justifyContent: 'center',
                   alignItems: 'center',
+                  width: 40,
+                  height: 40,
+                  borderRadius: 8,
+                  backgroundColor: PRIMARY,
                 }}>
-                <TouchableOpacity
-                  style={{
-                    justifyContent: 'center',
-                    marginRight: 6,
-                    alignItems: 'center',
-                    width: 40,
-                    height: 40,
-                    borderRadius: 8,
-                    backgroundColor: PRIMARY,
-                  }}>
-                  <Svg
-                    data-name="Icon awesome-phone-alt"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={15.833}
-                    height={15.833}
-                    viewBox="0 0 15.833 15.833">
-                    <Path
-                      data-name="Icon awesome-phone-alt"
-                      d="M15.382 11.189L11.918 9.7a.742.742 0 00-.866.213l-1.534 1.879a11.463 11.463 0 01-5.48-5.48l1.875-1.534a.74.74 0 00.213-.866L4.642.449a.747.747 0 00-.85-.43L.575.761A.742.742 0 000 1.485a14.348 14.348 0 0014.349 14.349.742.742 0 00.724-.575l.742-3.216a.751.751 0 00-.433-.854z"
-                      fill="#fff"
-                    />
-                  </Svg>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={{
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    width: 40,
-                    height: 40,
-                    borderRadius: 8,
-                    backgroundColor: PRIMARY,
-                  }}>
-                  <Svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={16.5}
-                    height={16.5}
-                    viewBox="0 0 16.5 16.5">
-                    <Path
-                      data-name="Icon material-message"
-                      d="M14.85 0H1.65A1.648 1.648 0 00.008 1.65L0 16.5l3.3-3.3h11.55a1.655 1.655 0 001.65-1.65v-9.9A1.655 1.655 0 0014.85 0zM13.2 9.9H3.3V8.25h9.9zm0-2.475H3.3v-1.65h9.9zm0-2.475H3.3V3.3h9.9z"
-                      fill="#fff"
-                    />
-                  </Svg>
-                </TouchableOpacity>
-              </View>
+                <Svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={16.5}
+                  height={16.5}
+                  viewBox="0 0 16.5 16.5">
+                  <Path
+                    data-name="Icon material-message"
+                    d="M14.85 0H1.65A1.648 1.648 0 00.008 1.65L0 16.5l3.3-3.3h11.55a1.655 1.655 0 001.65-1.65v-9.9A1.655 1.655 0 0014.85 0zM13.2 9.9H3.3V8.25h9.9zm0-2.475H3.3v-1.65h9.9zm0-2.475H3.3V3.3h9.9z"
+                    fill="#fff"
+                  />
+                </Svg>
+              </TouchableOpacity>
             </TouchableOpacity>
             <Text
               style={{
@@ -317,6 +352,7 @@ export default class WarehouseCardDetailsScreen extends Component {
                 <AreaCard area="7ft" text="Area" borderWidth={1} />
                 <AreaCard area="5ft" text="Available" />
               </View>
+
               <View
                 style={{
                   display: 'flex',
@@ -326,7 +362,21 @@ export default class WarehouseCardDetailsScreen extends Component {
                 }}>
                 <AreaCard area="2ft" text="Rating" borderWidth={1} />
               </View>
-
+              <View
+                style={{
+                  width: '100%',
+                  height: 50,
+                  backgroundColor: WHITE,
+                  paddingHorizontal: 16,
+                  borderRadius: 8,
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                }}>
+                <Text style={{fontWeight: 'bold'}}>Minimum Space Required</Text>
+                <Text style={{color: PRIMARY}}>9ft</Text>
+              </View>
               <Text
                 style={{
                   fontSize: 16,
@@ -338,7 +388,6 @@ export default class WarehouseCardDetailsScreen extends Component {
                 Categories
               </Text>
               <View style={{display: 'flex', flexDirection: 'row'}}>
-                <CategoriesShowCase text="Food" />
                 <CategoriesShowCase text="Food" />
                 <CategoriesShowCase text="Food" />
                 <CategoriesShowCase text="Food" />

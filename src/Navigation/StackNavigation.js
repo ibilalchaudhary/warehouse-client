@@ -1,8 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import DiscoverScreen from '../Screens/DiscoverScreen';
-import ExploreScreen from '../Screens/ExploreScreen';
 import SignupScreen from '../Screens/SignupScreen';
 import SignInformationScreen from '../Screens/SignInformationScreen';
 import SigninScreen from '../Screens/SigninScreen';
@@ -17,7 +15,6 @@ import MapViewScreen from '../Screens/MapViewScreen';
 import ChooseCardScreen from '../Screens/ChooseCardScreen';
 import AddCardScreen from '../Screens/AddCardScreen';
 import EditCardScreen from '../Screens/EditCardScreen';
-import AdvanceBookingScreen from '../Screens/AdvanceBookingScreen';
 import BookingScreen from '../Screens/BookingScreen';
 import CheckoutScreen from '../Screens/CheckoutScreen';
 import OrderCompleteScreen from '../Screens/OrderCompleteScreen';
@@ -26,6 +23,8 @@ import RequestScreen from '../Screens/RequestScreen';
 import EditProfileScreen from '../Screens/EditProfileScreen';
 import MessageScreen from '../Screens/MessageScreen';
 import NotificationsScreen from '../Screens/NotificationsScreen';
+import OnboardingNavigation from '../Screens/OnboardingScreen';
+import ProfileScreen from '../Screens/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,9 +32,8 @@ export default function StackNavigation() {
   return (
     <Stack.Navigator
       screenOptions={{header: () => null}}
-      initialRouteName="Discover">
-      <Stack.Screen name="Discover" component={DiscoverScreen} />
-      <Stack.Screen name="Explore" component={ExploreScreen} />
+      initialRouteName="Profile">
+      <Stack.Screen name="Onboarding" component={OnboardingNavigation} />
       <Stack.Screen name="Signup" component={SignupScreen} />
       <Stack.Screen name="Information" component={SignInformationScreen} />
       <Stack.Screen name="Signin" component={SigninScreen} />
@@ -61,6 +59,7 @@ export default function StackNavigation() {
         component={RepresentativeProfileScreen}
       />
       <Stack.Screen name="Request" component={RequestScreen} />
+      <Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
       <Stack.Screen name="Message" component={MessageScreen} />
       <Stack.Screen name="Notifications" component={NotificationsScreen} />

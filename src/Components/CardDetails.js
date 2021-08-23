@@ -26,7 +26,7 @@ export default function CardDetails({onPress}) {
         width: '100%',
         height: 120,
         borderRadius: 8,
-        backgroundColor: INPUT_BG,
+        backgroundColor: WHITE,
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',

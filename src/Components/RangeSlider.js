@@ -25,6 +25,7 @@ export default function RangeSlider() {
         maximumValue={1}
         minimumTrackTintColor={PRIMARY}
         maximumTrackTintColor={SECONDARY}
+        thumbTintColor={PRIMARY}
       />
       <View
         style={{

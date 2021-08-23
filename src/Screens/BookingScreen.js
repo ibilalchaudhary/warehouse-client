@@ -35,11 +35,9 @@ export default class BookingScreen extends Component {
   render() {
     const navigation = this.props.navigation;
     return (
-      <View
-        style={{
-          backgroundColor: '#FAFAFA',
-          flex: 1,
-        }}>
+      <ImageBackground
+        source={require('../Assets/main__background.png')}
+        style={{flex: 1, height: height}}>
         <Header
           heading="Booking"
           onPress={() => {
@@ -136,7 +134,7 @@ export default class BookingScreen extends Component {
             />
           </View>
         </ScrollView>
-      </View>
+      </ImageBackground>
     );
   }
 }

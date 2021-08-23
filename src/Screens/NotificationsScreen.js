@@ -47,34 +47,13 @@ function NotificationsCard() {
           <Text style={{fontWeight: 'bold', color: TEXT_COLOR}}>
             Notification Heading
           </Text>
-          <Text style={{color: PRIMARY}}>2 Hours ago</Text>
+          <Text style={{color: PRIMARY, marginRight: 12}}>2 Hours ago</Text>
         </View>
         <Text style={{fontSize: 13, marginVertical: 4}}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been
         </Text>
       </View>
-    </View>
-  );
-}
-
-function NotificationsBorder({text}) {
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: 10,
-      }}>
-      <Text style={{fontWeight: 'bold', color: PRIMARY}}>{text}</Text>
-      <View
-        style={{
-          borderWidth: 0.7,
-          width: '60%',
-          height: 0.7,
-          borderColor: PRIMARY,
-        }}></View>
     </View>
   );
 }
@@ -102,11 +81,10 @@ export default class NotificationsScreen extends Component {
             paddingHorizontal: 20,
             marginVertical: 20,
           }}>
-          <NotificationsBorder text="Unread Notifications" />
           <NotificationsCard />
           <NotificationsCard />
           <NotificationsCard />
-          <NotificationsBorder text="Read Notifications" />
+
           <NotificationsCard />
           <NotificationsCard />
           <NotificationsCard />

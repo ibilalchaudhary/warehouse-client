@@ -143,39 +143,74 @@ export default class ProfileScreen extends Component {
                 </Svg>
               }
             />
-            <EditProfileHeadings
-              text={'5454 54 65 232'}
-              lastItem={true}
-              svg={
+            <View
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                marginHorizontal: 20,
+                alignItems: 'center',
+                borderBottomColor: '#DBDBDB',
+                borderBottomWidth: 0,
+              }}>
+              <View
+                style={{
+                  marginRight: 20,
+                  marginHorizontal: 10,
+                  marginVertical: 20,
+                }}>
                 <Svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width={21}
-                  height={21.823}
-                  fill={TEXT_COLOR}
-                  viewBox="0 0 19 33.823">
+                  width={21.312}
+                  height={21.38}
+                  viewBox="0 0 19.312 34.38">
                   <Path
                     data-name="Path 1395"
-                    d="M3.555 4.575H3.54a.43.43 0 000 .86h.015a.43.43 0 100-.86z"
+                    d="M3.613 4.65h-.015a.437.437 0 000 .874h.015a.437.437 0 100-.874z"
+                    fill="#262629"
                   />
                   <Path
                     data-name="Path 1396"
-                    d="M5.29 19.628a.429.429 0 00.306-.128l5.945-6.015a.43.43 0 10-.612-.6L4.984 18.9a.43.43 0 00.306.732z"
+                    d="M5.377 19.956a.436.436 0 00.311-.13l6.043-6.114a.437.437 0 10-.622-.614l-6.043 6.114a.437.437 0 00.311.744z"
+                    fill="#262629"
                   />
                   <Path
                     data-name="Path 1397"
-                    d="M8.934 18.79a.43.43 0 00.608 0l3.039-3.039a.43.43 0 10-.608-.608l-3.039 3.039a.43.43 0 000 .608z"
+                    d="M9.08 19.099a.437.437 0 00.618 0l3.089-3.089a.437.437 0 00-.618-.618L9.08 18.481a.437.437 0 000 .618z"
+                    fill="#262629"
                   />
                   <Path
                     data-name="Path 1398"
-                    d="M9.5 31.137a1.186 1.186 0 10-1.186-1.186A1.186 1.186 0 009.5 31.137zm0-1.512a.326.326 0 11-.326.326.326.326 0 01.326-.326z"
+                    d="M9.656 31.649a1.205 1.205 0 10-1.205-1.205 1.205 1.205 0 001.205 1.205zm0-1.537a.331.331 0 11-.331.331.331.331 0 01.331-.331z"
+                    fill="#262629"
                   />
                   <Path
                     data-name="Path 1399"
-                    d="M15.546 0H3.453A3.457 3.457 0 000 3.453V30.37a3.457 3.457 0 003.453 3.453h12.093a3.457 3.457 0 003.453-3.453V3.453A3.457 3.457 0 0015.546 0zm2.593 30.37a2.6 2.6 0 01-2.593 2.593H3.453A2.6 2.6 0 01.86 30.37v-3.122h17.28zm0-25.8H5.093a.43.43 0 100 .86h13.046v20.958H.859V5.435h1.179a.43.43 0 000-.86H.859V3.453A2.6 2.6 0 013.452.86h12.093a2.6 2.6 0 012.593 2.593z"
+                    d="M15.802 0H3.51A3.514 3.514 0 000 3.51v27.36a3.514 3.514 0 003.51 3.51h12.292a3.514 3.514 0 003.51-3.51V3.51A3.514 3.514 0 0015.802 0zm2.636 30.87a2.639 2.639 0 01-2.636 2.636H3.51A2.639 2.639 0 01.874 30.87V27.7h17.564zm0-26.22H5.177a.437.437 0 100 .874h13.261v21.3H.874v-21.3h1.2a.437.437 0 000-.874h-1.2V3.51A2.639 2.639 0 013.51.874h12.292a2.639 2.639 0 012.636 2.636z"
+                    fill="#262629"
                   />
                 </Svg>
-              }
-            />
+              </View>
+              <View
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}>
+                <Text
+                  style={{fontSize: 13, color: TEXT_COLOR, marginRight: 40}}>
+                  +92301 4563786
+                </Text>
+                <Text
+                  style={{
+                    fontSize: 12,
+                    color: PRIMARY,
+                    textDecorationLine: 'underline',
+                  }}>
+                  Verify
+                </Text>
+              </View>
+            </View>
           </View>
           <View
             style={{
