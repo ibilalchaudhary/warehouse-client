@@ -238,7 +238,7 @@ export default class ProfileScreen extends Component {
             }}>
             <EditProfileHeadingsTouchAble
               onPress={() => {
-                navigation.NavigateTo('PaymentOptions');
+                navigation.navigate('PaymentOptions');
               }}
               text={'Payment Options'}
               svg={
