@@ -62,7 +62,12 @@ export default class ProfileScreen extends Component {
     const navigation = this.props.navigation;
     return (
       <View style={{flex: 1, backgroundColor: '#F3F3F3'}}>
-        <Header heading="Profile" onPress="Dashboard" />
+        <Header
+          heading="Profile"
+          onPress={() => {
+            navigation.navigate('BottomTabDashboard');
+          }}
+        />
         <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
           <View
             style={{
@@ -198,7 +203,7 @@ export default class ProfileScreen extends Component {
                   alignItems: 'center',
                 }}>
                 <Text
-                  style={{fontSize: 13, color: TEXT_COLOR, marginRight: 40}}>
+                  style={{fontSize: 13, color: TEXT_COLOR, marginRight: 70}}>
                   +92301 4563786
                 </Text>
                 <Text

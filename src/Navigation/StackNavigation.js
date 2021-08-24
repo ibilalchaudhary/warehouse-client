@@ -25,6 +25,7 @@ import MessageScreen from '../Screens/MessageScreen';
 import NotificationsScreen from '../Screens/NotificationsScreen';
 import OnboardingNavigation from '../Screens/OnboardingScreen';
 import ProfileScreen from '../Screens/ProfileScreen';
+import CencelRequestScreen from '../Screens/CencelRequestScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -63,6 +64,7 @@ export default function StackNavigation() {
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
       <Stack.Screen name="Message" component={MessageScreen} />
       <Stack.Screen name="Notifications" component={NotificationsScreen} />
+      <Stack.Screen name="CencelRequest" component={CencelRequestScreen} />
     </Stack.Navigator>
   );
 }
