@@ -158,12 +158,36 @@ export default class DashboardScreen extends Component {
               See more
             </Text>
           </TouchableOpacity>
-          <CardDetails onPress={() => {}} />
-          <CardDetails onPress={() => {}} />
-          <CardDetails onPress={() => {}} />
-          <CardDetails onPress={() => {}} />
-          <CardDetails onPress={() => {}} />
-          <CardDetails onPress={() => {}} />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
+          <CardDetails
+            onPress={() => {
+              navigation.navigate('WarehouseCardDetails');
+            }}
+          />
         </ScrollView>
       </ImageBackground>
     );

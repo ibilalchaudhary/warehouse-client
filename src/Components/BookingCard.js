@@ -58,6 +58,9 @@ export default function BookingCard() {
             Creative hub
           </Text>
           <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Request');
+            }}
             style={{
               display: 'flex',
               justifyContent: 'center',
