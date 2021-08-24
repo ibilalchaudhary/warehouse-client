@@ -45,13 +45,13 @@ export default class CencelRequestScreen extends Component {
       <ImageBackground
         source={require('../Assets/main__background.png')}
         style={{flex: 1, height: height}}>
+        <Header
+          heading="Request"
+          onPress={() => {
+            navigation.navigate('Request');
+          }}
+        />
         <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
-          <Header
-            heading="Request"
-            onPress={() => {
-              navigation.navigate('Request');
-            }}
-          />
           <View
             style={{
               display: 'flex',

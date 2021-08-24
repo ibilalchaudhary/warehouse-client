@@ -26,6 +26,10 @@ import NotificationsScreen from '../Screens/NotificationsScreen';
 import OnboardingNavigation from '../Screens/OnboardingScreen';
 import ProfileScreen from '../Screens/ProfileScreen';
 import CencelRequestScreen from '../Screens/CencelRequestScreen';
+import ChangePasswordScreen from '../Screens/ChangePasswordScreen';
+import ReviewScreen from '../Screens/ReviewScreen';
+import PaymentOptionsScreen from '../Screens/PaymentOptionsScreen';
+import AdvanceBookedScreen from '../Screens/AdvanceBookedScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,7 +37,7 @@ export default function StackNavigation() {
   return (
     <Stack.Navigator
       screenOptions={{header: () => null}}
-      initialRouteName="Profile">
+      initialRouteName="Onboarding">
       <Stack.Screen name="Onboarding" component={OnboardingNavigation} />
       <Stack.Screen name="Signup" component={SignupScreen} />
       <Stack.Screen name="Information" component={SignInformationScreen} />
@@ -54,7 +58,9 @@ export default function StackNavigation() {
       />
       <Stack.Screen name="Booking" component={BookingScreen} />
       <Stack.Screen name="Checkout" component={CheckoutScreen} />
+      <Stack.Screen name="PaymentOptions" component={PaymentOptionsScreen} />
       <Stack.Screen name="OrderComplete" component={OrderCompleteScreen} />
+      <Stack.Screen name="Review" component={ReviewScreen} />
       <Stack.Screen
         name="RepresentativeProfile"
         component={RepresentativeProfileScreen}
@@ -65,6 +71,8 @@ export default function StackNavigation() {
       <Stack.Screen name="Message" component={MessageScreen} />
       <Stack.Screen name="Notifications" component={NotificationsScreen} />
       <Stack.Screen name="CencelRequest" component={CencelRequestScreen} />
+      <Stack.Screen name="ChangePassword" component={ChangePasswordScreen} />
+      <Stack.Screen name="AdvanceBooked" component={AdvanceBookedScreen} />
     </Stack.Navigator>
   );
 }

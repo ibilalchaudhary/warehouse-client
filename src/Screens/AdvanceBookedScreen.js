@@ -17,19 +17,36 @@ import Logo from '../Components/Logo';
 import CodeInput from 'react-native-confirmation-code-input';
 import Header from '../Components/Header';
 import TopTabDashboard from '../Navigation/TopTabNavigation';
+import CardDetails from '../Components/CardDetails';
 
-export default class AdvanceBookingScreen extends Component {
+export default class AdvanceBookedScreen extends Component {
   render() {
     const navigation = this.props.navigation;
     return (
       <View
         style={{height: height, flex: 1, backgroundColor: '#F3F3F3'}}
         source={require('../Assets/Signup__bg.png')}>
-        <Header heading="Bookings" />
+        <Header
+          heading="Advance Bookings"
+          onPress={() => {
+            navigation.navigate('WarehouseCardDetails');
+          }}
+        />
 
-        <View style={{width: '100%', height: height, paddingHorizontal: 18}}>
-          <TopTabDashboard />
-        </View>
+        <ScrollView
+          style={{
+            width: '100%',
+            height: height,
+            paddingHorizontal: 18,
+          }}>
+          <CardDetails />
+          <CardDetails />
+          <CardDetails />
+          <CardDetails />
+          <CardDetails />
+          <CardDetails />
+          <CardDetails />
+        </ScrollView>
       </View>
     );
   }

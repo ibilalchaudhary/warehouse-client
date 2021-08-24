@@ -69,7 +69,7 @@ export default class ChooseCardScreen extends Component {
       <SafeAreaView style={{flex: 1}}>
         <Header
           onPress={() => {
-            navigation.navigate('');
+            navigation.navigate('PaymentOptions');
           }}
           heading="Choose Card"
         />

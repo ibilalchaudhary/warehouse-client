@@ -206,14 +206,16 @@ export default class ProfileScreen extends Component {
                   style={{fontSize: 13, color: TEXT_COLOR, marginRight: 70}}>
                   +92301 4563786
                 </Text>
-                <Text
-                  style={{
-                    fontSize: 12,
-                    color: PRIMARY,
-                    textDecorationLine: 'underline',
-                  }}>
-                  Verify
-                </Text>
+                <TouchableOpacity>
+                  <Text
+                    style={{
+                      fontSize: 12,
+                      color: PRIMARY,
+                      textDecorationLine: 'underline',
+                    }}>
+                    Verify
+                  </Text>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -236,7 +238,7 @@ export default class ProfileScreen extends Component {
             }}>
             <EditProfileHeadingsTouchAble
               onPress={() => {
-                navigation.NavigateTo('');
+                navigation.NavigateTo('PaymentOptions');
               }}
               text={'Payment Options'}
               svg={
@@ -273,7 +275,7 @@ export default class ProfileScreen extends Component {
               text={'Change Password'}
               lastItem={true}
               onPress={() => {
-                navigation.NavigateTo('');
+                navigation.navigate('ChangePassword');
               }}
               svg={
                 <Svg

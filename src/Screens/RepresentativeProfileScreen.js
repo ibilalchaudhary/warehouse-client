@@ -155,37 +155,10 @@ export default class RepresentativeProfileScreen extends Component {
             <View
               style={{
                 display: 'flex',
-                flexDirection: 'row',
                 alignItems: 'center',
                 marginVertical: 10,
                 marginBottom: 20,
               }}>
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate('');
-                }}
-                style={{
-                  justifyContent: 'center',
-                  marginRight: 6,
-                  alignItems: 'center',
-                  width: 40,
-                  height: 40,
-                  borderRadius: 8,
-                  backgroundColor: PRIMARY,
-                }}>
-                <Svg
-                  data-name="Icon awesome-phone-alt"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={15.833}
-                  height={15.833}
-                  viewBox="0 0 15.833 15.833">
-                  <Path
-                    data-name="Icon awesome-phone-alt"
-                    d="M15.382 11.189L11.918 9.7a.742.742 0 00-.866.213l-1.534 1.879a11.463 11.463 0 01-5.48-5.48l1.875-1.534a.74.74 0 00.213-.866L4.642.449a.747.747 0 00-.85-.43L.575.761A.742.742 0 000 1.485a14.348 14.348 0 0014.349 14.349.742.742 0 00.724-.575l.742-3.216a.751.751 0 00-.433-.854z"
-                    fill="#fff"
-                  />
-                </Svg>
-              </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => {
                   navigation.navigate('Message');

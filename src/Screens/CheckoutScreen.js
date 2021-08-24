@@ -229,7 +229,7 @@ export default class CheckoutScreen extends Component {
                 <Buttons
                   placeholder="Checkout"
                   onPress={() => {
-                    navigation.navigate('ChooseCard');
+                    navigation.navigate('PaymentOptions');
                   }}
                 />
               </View>

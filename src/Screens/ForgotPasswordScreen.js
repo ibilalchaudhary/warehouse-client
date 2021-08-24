@@ -59,7 +59,7 @@ export default class ForgotPasswordScreen extends Component {
           </View>
           <View style={{marginVertical: 20}}>
             <Buttons
-              placeholder="Send Code"
+              placeholder="Send Recovery Code"
               onPress={() => {
                 navigation.navigate('OTP');
               }}

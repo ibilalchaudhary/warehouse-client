@@ -29,6 +29,7 @@
     "react-native-maps": "^0.28.0",
     "react-native-neat-date-picker": "^1.0.6",
     "react-native-pager-view": "^5.4.0",
+    "react-native-ratings": "^8.1.0",
     "react-native-safe-area-context": "^3.3.0",
     "react-native-screens": "^3.5.0",
     "react-native-svg": "^12.1.1",

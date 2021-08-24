@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {
+  DISABLE,
   INPUT_BG,
   PRIMARY,
   SECONDARY,
@@ -408,9 +409,23 @@ export default class WarehouseCardDetailsScreen extends Component {
               </Text>
               <Reviews />
               <Reviews />
+              <View
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  marginVertical: 10,
+                }}>
+                <Text
+                  style={{fontSize: 22, fontWeight: 'bold', color: TEXT_COLOR}}>
+                  Availablity
+                </Text>
+                <Text style={{fontSize: 12, color: DISABLE}}>
+                  Aug 7- Aug 12
+                </Text>
+              </View>
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate('');
+                  navigation.navigate('AdvanceBooked');
                 }}
                 style={{
                   display: 'flex',
