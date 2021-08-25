@@ -209,7 +209,7 @@ class ExploreScreen extends Component {
           style={{
             alignItems: 'center',
             alignContent: 'center',
-            marginVertical: 20,
+            marginVertical: 40,
           }}>
           <Buttons
             placeholder="Let's get started"

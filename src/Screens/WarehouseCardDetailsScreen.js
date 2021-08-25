@@ -7,13 +7,19 @@ import {
   TEXT_COLOR,
   WHITE,
 } from '../Constants/Colors';
-import {View, ScrollView, Image, Text, TouchableOpacity} from 'react-native';
+import {
+  View,
+  ScrollView,
+  Image,
+  Text,
+  TouchableOpacity,
+  AppRegistry,
+} from 'react-native';
 import Svg, {G, Path} from 'react-native-svg';
 import {height, width} from '../Constants/Dimensions';
 import Header from '../Components/Header';
 import WarehouseMainCard from '../Components/WarehouseMainCard';
 import ImageZoom from 'react-native-image-pan-zoom';
-import Selector from '../Components/Selector';
 import Reviews from '../Components/Reviews';
 
 function AreaCard({area, text, borderWidth}) {
@@ -62,6 +68,7 @@ export default class WarehouseCardDetailsScreen extends Component {
       galleryImage: require('../Assets/galleryPic.png'),
     };
   }
+
   render() {
     const navigation = this.props.navigation;
 
@@ -140,7 +147,7 @@ export default class WarehouseCardDetailsScreen extends Component {
             </Text>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('RepresentativeProfile');
+                navigation.navigate('');
               }}
               style={{
                 display: 'flex',
@@ -413,7 +420,7 @@ export default class WarehouseCardDetailsScreen extends Component {
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  marginVertical: 10,
+                  marginVertical: 20,
                 }}>
                 <Text
                   style={{fontSize: 22, fontWeight: 'bold', color: TEXT_COLOR}}>
