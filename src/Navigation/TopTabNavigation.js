@@ -10,8 +10,6 @@ import {
   Dimensions,
 } from 'react-native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-
-import CardDetails from '../Components/CardDetails';
 import BookingCard from '../Components/BookingCard';
 
 const Tab = createMaterialTopTabNavigator();
@@ -29,7 +27,7 @@ function WarehouseListingCard() {
   );
 }
 
-function WarehouseBookingCard({onPress}) {
+function WarehouseBookingCard() {
   return (
     <>
       <ScrollView style={{flex: 1}}>
@@ -50,7 +48,7 @@ export default function TopTabDashboard() {
         indicatorStyle: {
           borderBottomColor: '#4571B0',
           borderBottomWidth: 4,
-          borderRadius: 4,
+          borderRadius: 2,
         },
         tabStyle: {
           width: 160,

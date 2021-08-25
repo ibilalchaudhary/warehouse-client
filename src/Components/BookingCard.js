@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import Svg, {G, Path} from 'react-native-svg';
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+
 import {
   INPUT_BG,
   PRIMARY,
@@ -60,12 +60,6 @@ export default class BookingCard extends Component {
               Creative hub
             </Text>
             <TouchableOpacity
-              onPress={() => {
-                navigation.navigate('Request');
-              }}
-              onPress={() => {
-                navigation.navigate('Request');
-              }}
               style={{
                 display: 'flex',
                 justifyContent: 'center',
