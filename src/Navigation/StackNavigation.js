@@ -37,7 +37,7 @@ export default function StackNavigation() {
   return (
     <Stack.Navigator
       screenOptions={{header: () => null}}
-      initialRouteName="BottomTabDashboard">
+      initialRouteName="Onboarding">
       <Stack.Screen name="Onboarding" component={OnboardingNavigation} />
       <Stack.Screen name="Signup" component={SignupScreen} />
       <Stack.Screen name="Information" component={SignInformationScreen} />
