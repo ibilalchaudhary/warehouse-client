@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Text, Picker, TextInput, View} from 'react-native';
+import {Text, TextInput, View} from 'react-native';
+import {Picker} from '@react-native-picker/picker';
 import {INPUT_BG} from '../Constants/Colors';
 
 export default class Dropdown extends Component {

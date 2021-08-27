@@ -119,21 +119,10 @@ export default class RepresentativeProfileScreen extends Component {
               <View
                 style={{
                   padding: 40,
-
                   backgroundColor: WHITE,
                 }}>
-                <Buttons
-                  placeholder="Open Camera"
-                  onPress={() => {
-                    this.OpenCamera;
-                  }}
-                />
-                <Buttons
-                  placeholder="Open Gallary"
-                  onPress={() => {
-                    this.OpenPicker;
-                  }}
-                />
+                <Buttons placeholder="Open Camera" onPress={this.OpenCamera} />
+                <Buttons placeholder="Open Gallary" onPress={this.OpenPicker} />
                 <Buttons
                   placeholder="Close"
                   onPress={() => {

@@ -106,18 +106,8 @@ export default class UploadPicScreen extends Component {
 
                   backgroundColor: WHITE,
                 }}>
-                <Buttons
-                  placeholder="Open Camera"
-                  onPress={() => {
-                    this.OpenCamera;
-                  }}
-                />
-                <Buttons
-                  placeholder="Open Gallary"
-                  onPress={() => {
-                    this.OpenPicker;
-                  }}
-                />
+                <Buttons placeholder="Open Camera" onPress={this.OpenCamera} />
+                <Buttons placeholder="Open Gallary" onPress={this.OpenPicker} />
                 <Buttons
                   placeholder="Close"
                   onPress={() => {
@@ -133,7 +123,7 @@ export default class UploadPicScreen extends Component {
             <Buttons
               placeholder="Save"
               onPress={() => {
-                navigation.navigate('Signin');
+                navigation.navigate('BottomTabDashboard');
               }}
             />
           </View>

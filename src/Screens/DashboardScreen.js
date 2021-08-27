@@ -15,6 +15,12 @@ import Selector from '../Components/Selector';
 import WarehouseCard from '../Components/WarehouseCard';
 import CardDetails from '../Components/CardDetails';
 export default class DashboardScreen extends Component {
+  constructor() {
+    super();
+    this.state = {
+      newNotifications: true,
+    };
+  }
   render() {
     const navigation = this.props.navigation;
     const catagrories = ['Size', 'Health', 'Weight', 'Area', 'Height', 'Space'];
@@ -48,8 +54,6 @@ export default class DashboardScreen extends Component {
               style={{
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent: 'space-between',
-                width: '17%',
               }}>
               <TouchableOpacity
                 onPress={() => {
@@ -63,10 +67,10 @@ export default class DashboardScreen extends Component {
                   <G
                     data-name="Icon feather-search"
                     fill="none"
-                    stroke="#4571b0"
+                    stroke="#7b7b7b"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={3}>
+                    strokeWidth={2}>
                     <Path
                       data-name="Path 706"
                       d="M23.04 12.27A10.77 10.77 0 1112.27 1.5a10.77 10.77 0 0110.77 10.77z"
@@ -81,7 +85,13 @@ export default class DashboardScreen extends Component {
               <TouchableOpacity
                 onPress={() => {
                   navigation.navigate('Notifications');
-                }}>
+                  if (this.state.newNotifications === true) {
+                    this.setState({
+                      newNotifications: false,
+                    });
+                  }
+                }}
+                style={{marginLeft: 10}}>
                 <Svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={22.476}
@@ -100,15 +110,18 @@ export default class DashboardScreen extends Component {
                     />
                   </G>
                 </Svg>
-                <View
-                  style={{
-                    width: 10,
-                    height: 10,
-                    borderRadius: 6,
-                    backgroundColor: PRIMARY,
-                    top: -20,
-                    right: -12,
-                  }}></View>
+                {this.state.newNotifications ? (
+                  <View
+                    style={{
+                      width: 10,
+                      height: 10,
+                      borderRadius: 6,
+                      backgroundColor: PRIMARY,
+                      top: -20,
+                      right: -12,
+                    }}
+                  />
+                ) : null}
               </TouchableOpacity>
             </View>
           </View>
@@ -136,13 +149,28 @@ export default class DashboardScreen extends Component {
             Nearby Warehouses
           </Text>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <WarehouseCard />
-            <WarehouseCard />
-            <WarehouseCard />
-            <WarehouseCard />
+            <WarehouseCard
+              onPress={() => {
+                navigation.navigate('WarehouseCardDetails');
+              }}
+            />
+            <WarehouseCard
+              onPress={() => {
+                navigation.navigate('WarehouseCardDetails');
+              }}
+            />
+            <WarehouseCard
+              onPress={() => {
+                navigation.navigate('WarehouseCardDetails');
+              }}
+            />
+            <WarehouseCard
+              onPress={() => {
+                navigation.navigate('WarehouseCardDetails');
+              }}
+            />
           </ScrollView>
-
-          <TouchableOpacity
+          <View
             style={{
               alignItems: 'flex-end',
               display: 'flex',
@@ -154,10 +182,12 @@ export default class DashboardScreen extends Component {
             <Text style={{fontSize: 16, fontWeight: 'bold', color: TEXT_COLOR}}>
               More Listing
             </Text>
-            <Text style={{color: PRIMARY, textDecorationLine: 'underline'}}>
-              See more
-            </Text>
-          </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={{color: PRIMARY, textDecorationLine: 'underline'}}>
+                See more
+              </Text>
+            </TouchableOpacity>
+          </View>
           <CardDetails
             onPress={() => {
               navigation.navigate('WarehouseCardDetails');

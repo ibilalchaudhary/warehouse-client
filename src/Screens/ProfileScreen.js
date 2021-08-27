@@ -206,7 +206,10 @@ export default class ProfileScreen extends Component {
                   style={{fontSize: 13, color: TEXT_COLOR, marginRight: 70}}>
                   +92301 4563786
                 </Text>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate('OTP');
+                  }}>
                   <Text
                     style={{
                       fontSize: 12,

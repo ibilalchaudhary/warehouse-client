@@ -153,12 +153,14 @@ export default class SigninScreen extends Component {
               alignItems: 'center',
               marginBottom: 50,
             }}>
-            <Text>Already have a account?</Text>
+            <Text>Don't have a account?</Text>
             <TouchableOpacity
               onPress={() => {
                 navigation.navigate('Signup');
               }}>
-              <Text style={{textDecorationLine: 'underline'}}>Sign Up</Text>
+              <Text style={{textDecorationLine: 'underline', marginLeft: 5}}>
+                Sign Up
+              </Text>
             </TouchableOpacity>
           </View>
         </ScrollView>

@@ -146,9 +146,6 @@ export default class WarehouseCardDetailsScreen extends Component {
               Owner
             </Text>
             <TouchableOpacity
-              onPress={() => {
-                navigation.navigate('');
-              }}
               style={{
                 display: 'flex',
                 flexDirection: 'row',

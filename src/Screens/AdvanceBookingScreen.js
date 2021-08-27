@@ -26,10 +26,7 @@ export default class AdvanceBookingScreen extends Component {
         style={{height: height, flex: 1, backgroundColor: '#F3F3F3'}}
         source={require('../Assets/Signup__bg.png')}>
         <Header heading="Bookings" />
-
-        <View style={{width: '100%', height: height, paddingHorizontal: 18}}>
-          <TopTabDashboard />
-        </View>
+        <TopTabDashboard />
       </View>
     );
   }

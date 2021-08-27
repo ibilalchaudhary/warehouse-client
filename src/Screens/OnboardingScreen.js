@@ -214,7 +214,7 @@ class ExploreScreen extends Component {
           <Buttons
             placeholder="Let's get started"
             onPress={() => {
-              navigation.navigate('Signup');
+              navigation.navigate('Signin');
             }}
           />
         </View>

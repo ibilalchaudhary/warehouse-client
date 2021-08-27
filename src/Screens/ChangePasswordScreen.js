@@ -143,7 +143,7 @@ export default class ChangePasswordScreen extends Component {
 
           <View style={{marginVertical: 40, marginTop: 100}}>
             <Buttons
-              placeholder="Save new password"
+              placeholder="Save Password"
               onPress={() => {
                 navigation.navigate('OTP');
               }}

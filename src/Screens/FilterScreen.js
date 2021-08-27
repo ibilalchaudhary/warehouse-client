@@ -34,7 +34,7 @@ export default class FilterScreen extends Component {
             flex: 1,
           }}>
           <Header
-            heading="Filters"
+            heading="Search Warehouses"
             onPress={() => {
               navigation.navigate('BottomTabDashboard');
             }}
@@ -103,7 +103,7 @@ export default class FilterScreen extends Component {
                     </Svg>
                   </View>
                   <TextInput
-                    placeholder="Search"
+                    placeholder="Location"
                     placeholderTextColor={SECONDARY}
                     style={{
                       marginLeft: 16,
@@ -220,7 +220,7 @@ export default class FilterScreen extends Component {
                   onPress={() => {
                     navigation.navigate('SearchResult');
                   }}
-                  placeholder="Filter"
+                  placeholder="Search"
                 />
               </View>
             </View>

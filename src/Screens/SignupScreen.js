@@ -207,7 +207,9 @@ export default class SignupScreen extends Component {
               onPress={() => {
                 navigation.navigate('Signin');
               }}>
-              <Text style={{textDecorationLine: 'underline'}}>Sign In</Text>
+              <Text style={{textDecorationLine: 'underline', marginLeft: 5}}>
+                Sign In
+              </Text>
             </TouchableOpacity>
           </View>
         </ScrollView>

@@ -3,9 +3,10 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {PRIMARY, WHITE} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
 
-export default function WarehouseCard() {
+export default function WarehouseCard({onPress}) {
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={{position: 'relative', marginRight: 22, marginBottom: 12}}>
       <Image
         source={require('../Assets/warehouse__bg.png')}

@@ -16,41 +16,37 @@ const Tab = createMaterialTopTabNavigator();
 
 function WarehouseListingCard() {
   return (
-    <>
-      <ScrollView style={{flex: 1}}>
-        <BookingCard />
-        <BookingCard />
-        <BookingCard />
-        <BookingCard />
-      </ScrollView>
-    </>
+    <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
+      <BookingCard />
+      <BookingCard />
+      <BookingCard />
+      <BookingCard />
+    </ScrollView>
   );
 }
 
 function WarehouseBookingCard() {
   return (
-    <>
-      <ScrollView style={{flex: 1}}>
-        <BookingCard />
-        <BookingCard />
-      </ScrollView>
-    </>
+    <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
+      <BookingCard />
+      <BookingCard />
+    </ScrollView>
   );
 }
 export default function TopTabDashboard() {
   return (
     <Tab.Navigator
-      tabBarOptions={{
-        style: {
+      screenOptions={{
+        tabBarStyle: {
           elevation: 0,
           backgroundColor: '#F3F3F3',
         },
-        indicatorStyle: {
+        tabBarIndicatorStyle: {
           borderBottomColor: '#4571B0',
           borderBottomWidth: 4,
           borderRadius: 2,
         },
-        tabStyle: {
+        tabBarItemStyle: {
           width: 160,
         },
       }}>

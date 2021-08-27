@@ -47,12 +47,13 @@ export default class OTPScreen extends Component {
             activeColor={PRIMARY}
             inactiveColor={SECONDARY}
             autoFocus={false}
-            codeLength="4"
+            codeLength={4}
             inputPosition="center"
             size={50}
             onFulfill={() => {}}
             containerStyle={{marginTop: 60}}
             codeInputStyle={{borderRadius: 8, backgroundColor: INPUT_BG}}
+            keyboardType="number-pad"
           />
           <View
             style={{
